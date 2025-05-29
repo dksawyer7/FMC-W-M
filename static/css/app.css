@@ -1,0 +1,61 @@
+/* Base typography */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333333;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Color variables */
+:root {
+  --primary-color: #00563B;
+  --secondary-color: #FFC72C;
+  --neutral-bg: #F5F5F5;
+  --text-color: #333333;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-primary:hover {
+  filter: brightness(0.9);
+}
+.btn-secondary {
+  background-color: #fff;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+  padding: 1rem 0;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+}
+
+/* Utility sections */
+.hero {
+  background-color: var(--neutral-bg);
+}
+.section {
+  padding: 3rem 0;
+}

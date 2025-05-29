@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+{% block title %}Leadership – W&M Financial Modeling Club{% endblock %}
+
+{% block content %}
+
+  <!-- Get Involved -->
+  <section class="section">
+    <div class="container">
+      <h2 class="h3 mb-4 text-center">Get Involved</h2>
+      <p class="text-center mx-auto" style="max-width: 700px;">
+        Whether you’re a first-year just curious about Excel or a senior gearing up for interviews, there’s
+        a place for you. Volunteer to co-host a workshop, join our case-competition team, or become a
+        peer tutor—helping others is one of the best ways to deepen your own skills.
+      </p>
+      <div class="text-center mt-4">
+        <a href="{{ url_for('join') }}" class="btn btn-primary btn-lg">Join a Committee</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Executive Board -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="h3 mb-4 text-center">Executive Board 2024–25</h2>
+      <div class="row g-4">
+        <!-- President -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <img src="{{ url_for('static', filename='assets/images/member1.jpg') }}" class="card-img-top" alt="Alex Johnson">
+            <div class="card-body">
+              <h5 class="card-title mb-1">Alex Johnson</h5>
+              <p class="text-muted mb-2">President</p>
+              <a href="https://linkedin.com/in/alex-johnson" target="_blank" class="text-decoration-none">
+                <i class="fab fa-linkedin fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- VP Workshops -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <img src="{{ url_for('static', filename='assets/images/member2.jpg') }}" class="card-img-top" alt="Priya Singh">
+            <div class="card-body">
+              <h5 class="card-title mb-1">Priya Singh</h5>
+              <p class="text-muted mb-2">VP, Workshops</p>
+              <a href="https://linkedin.com/in/priya-singh" target="_blank" class="text-decoration-none">
+                <i class="fab fa-linkedin fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- VP Membership -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <img src="{{ url_for('static', filename='assets/images/member3.jpg') }}" class="card-img-top" alt="Marcus Lee">
+            <div class="card-body">
+              <h5 class="card-title mb-1">Marcus Lee</h5>
+              <p class="text-muted mb-2">VP, Membership</p>
+              <a href="https://linkedin.com/in/marcus-lee" target="_blank" class="text-decoration-none">
+                <i class="fab fa-linkedin fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Treasurer -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <img src="{{ url_for('static', filename='assets/images/member4.jpg') }}" class="card-img-top" alt="Sara Kim">
+            <div class="card-body">
+              <h5 class="card-title mb-1">Sara Kim</h5>
+              <p class="text-muted mb-2">Treasurer</p>
+              <a href="https://linkedin.com/in/sara-kim" target="_blank" class="text-decoration-none">
+                <i class="fab fa-linkedin fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Secretary -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <img src="{{ url_for('static', filename='assets/images/member5.jpg') }}" class="card-img-top" alt="Javier Morales">
+            <div class="card-body">
+              <h5 class="card-title mb-1">Javier Morales</h5>
+              <p class="text-muted mb-2">Secretary</p>
+              <a href="https://linkedin.com/in/javier-morales" target="_blank" class="text-decoration-none">
+                <i class="fab fa-linkedin fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

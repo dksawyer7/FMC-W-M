@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block title %}About Us – W&M Financial Modeling Club{% endblock %}
+
+{% block content %}
+
+  <!-- Intro Banner -->
+  <section class="text-center text-white d-flex align-items-center justify-content-center" 
+           style="background: url('{{ url_for('static', filename='assets/images/about-bg.jpg') }}') center/cover; height: 50vh;">
+    <div class="px-4">
+      <h1 class="display-4">About the Financial Modeling Club</h1>
+      <p class="lead">Bridging theory and practice since 2018</p>
+    </div>
+  </section>
+
+  <!-- Background & Vision -->
+  <section class="section">
+    <div class="container">
+      <h2 class="h3 mb-4">Our Story</h2>
+      <p>
+        Founded in the spring of 2018 by a small group of finance enthusiasts at William &amp; Mary,
+        the Financial Modeling Club has grown into a vibrant community of 200+ students across all majors.
+        We saw a gap between classroom theory and the real-world spreadsheets used by professionals—
+        so we set out to build hands-on workshops, speaker events, and mentoring that equip every member
+        with marketable modeling skills.
+      </p>
+      <h2 class="h3 mt-5 mb-4">Our Vision</h2>
+      <p>
+        We envision a William &amp; Mary where every student—regardless of year or major—can
+        build, test, and present financial models with confidence. By fostering collaboration,
+        peer-to-peer teaching, and connections to alumni in investment firms, we aim to launch
+        the next generation of analysts, advisors, and entrepreneurs.
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission Statement -->
+  <section class="bg-light py-5">
+    <div class="container">
+      <div class="p-4 border-start border-4" style="border-color: var(--secondary-color)!important;">
+        <h2 class="h4 mb-3">Our Mission</h2>
+        <p class="mb-0">
+          To empower William &amp; Mary students with practical financial modeling expertise through
+          interactive workshops, real-world case studies, and professional mentorship—fostering
+          analytical rigor, creativity, and inclusive collaboration.
+        </p>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
