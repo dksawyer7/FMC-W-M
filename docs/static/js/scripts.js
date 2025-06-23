@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   const list = document.getElementById('events-list');
   if (list) {
-    fetch('../data/events.json')
+    fetch('data/events.json')
       .then(resp => resp.json())
       .then(events => {
         events.forEach(evt => {
