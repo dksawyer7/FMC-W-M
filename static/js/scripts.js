@@ -18,4 +18,16 @@ document.addEventListener('DOMContentLoaded', function () {
         list.appendChild(li);
       });
   }
+
+  const PLACEHOLDER = 'https://via.placeholder.com/500';
+  document.querySelectorAll('img').forEach(img => {
+    if (!img.getAttribute('src')) {
+      img.src = PLACEHOLDER;
+    }
+    img.addEventListener('error', function () {
+      if (img.src !== PLACEHOLDER) {
+        img.src = PLACEHOLDER;
+      }
+    });
+  });
 });
