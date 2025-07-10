@@ -47,6 +47,12 @@ a:hover {
   padding: 1rem 0;
 }
 
+/* Remove underline when hovering over header links */
+.navbar .nav-link:hover,
+.navbar .navbar-brand:hover {
+  text-decoration: none;
+}
+
 /* Footer */
 footer {
   font-size: 0.9rem;
