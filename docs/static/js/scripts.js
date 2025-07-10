@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 
-  const PLACEHOLDER = 'https://via.placeholder.com/500';
+  const PLACEHOLDER = 'https://unsplash.it/500/500';
   document.querySelectorAll('img').forEach(img => {
     if (!img.getAttribute('src')) {
       img.src = PLACEHOLDER;
