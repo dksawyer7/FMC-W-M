@@ -197,3 +197,8 @@ body.home-page footer {
     margin-top: 0;
   }
 }
+
+/* Hide the dropdown arrow next to About Us */
+.navbar .dropdown-toggle::after {
+  display: none;
+}
