@@ -24,7 +24,13 @@
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="about.html" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="about.html">About Us</a></li>
+              <li><a class="dropdown-item" href="speaker.html">Speaker of the Week</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link" href="leadership.html">Leadership</a></li>
           <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
           <li class="nav-item">
@@ -48,17 +54,6 @@
 
     </section>
 
-    <!-- Guest Speaker Section -->
-    <section class="guest-speaker text-center my-5">
-      <div class="container">
-        <h2 class="h3 mb-3">Guest Speaker of the Week</h2>
-        <h3 class="h4">Alex Johnson</h3>
-        <p class="mx-auto" style="max-width: 600px;">
-          Alex is a senior analyst at Capital Co. who will share tips on
-          building dynamic models in Excel during this week's meeting.
-        </p>
-      </div>
-    </section>
 
     <!-- Instagram Feed Preview -->
     <section class="instagram-feed my-5">

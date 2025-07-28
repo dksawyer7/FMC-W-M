@@ -170,3 +170,11 @@ footer {
   font-size: 2rem;
   color: var(--primary-color);
 }
+
+/* Show dropdown menu on hover for large screens */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
