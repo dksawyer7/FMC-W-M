@@ -53,6 +53,7 @@ a:hover {
 /* Navbar */
 .navbar {
   padding: 1rem 0;
+  background-color: #fff;
 }
 
 body.home-page .navbar {
