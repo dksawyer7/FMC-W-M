@@ -161,11 +161,12 @@ footer {
 /* Translucent container over homepage background */
 .home-overlay {
   background-color: rgba(255, 255, 255, 0.85);
-  margin: 2rem 0;
+  margin: 2in 0;
   padding: 2rem 1rem;
   color: #000;
 }
 
 .home-overlay h1.welcome {
   font-size: 2rem;
+  color: var(--primary-color);
 }
