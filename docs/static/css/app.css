@@ -240,3 +240,12 @@ body.home-page footer {
 .navbar .dropdown-toggle::after {
   display: none;
 }
+
+/* Footer branding on the homepage */
+.footer-brand img {
+  height: 60px;
+}
+
+.footer-brand .wm-serif {
+  font-family: serif;
+}
