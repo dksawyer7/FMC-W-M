@@ -249,3 +249,25 @@ body.home-page footer {
 .footer-brand .wm-serif {
   font-family: serif;
 }
+
+/* Footer navigation */
+.footer-nav {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.85rem;
+  width: fit-content;
+}
+
+.footer-nav li {
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width: 992px) {
+  footer .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
+
+footer .dropdown-toggle::after {
+  display: none;
+}
