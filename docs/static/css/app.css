@@ -73,6 +73,7 @@ footer {
 .hero.home-bg {
   position: relative;
   color: #fff;
+  background: none;
 }
 .section {
   padding: 3rem 0;
