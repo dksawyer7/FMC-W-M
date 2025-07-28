@@ -122,6 +122,10 @@ body.home-page footer {
   margin-bottom: 0.5in;
 }
 
+body.about-page footer {
+  margin-bottom: 0.5in;
+}
+
 /* Utility sections */
 .hero {
   background-color: var(--neutral-bg);
@@ -133,6 +137,17 @@ body.home-page footer {
 }
 body.about-page .hero {
   background-color: transparent;
+}
+.about-hero {
+  height: 25vh;
+}
+.about-main {
+  margin-left: 4in;
+  margin-right: 4in;
+  padding: 0;
+}
+body.about-page .section {
+  padding: 1rem 0;
 }
 .section {
   padding: 3rem 0;
