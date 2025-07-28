@@ -143,7 +143,12 @@ body.about-page .hero {
 }
 body.howwework-page .hero {
   background-color: transparent;
-  min-height: calc(100vh - 200px);
+  min-height: auto;
+}
+
+body.howwework-page .howwework-box {
+  margin-left: 4in;
+  margin-right: 4in;
 }
 .section {
   padding: 3rem 0;
