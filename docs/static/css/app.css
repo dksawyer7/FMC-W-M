@@ -219,6 +219,15 @@ body.home-page footer {
   color: var(--primary-color);
 }
 
+/* Mission statement styling on the homepage */
+.mission-statement {
+  color: #000;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  text-align: center;
+  white-space: nowrap;
+}
+
 /* Show dropdown menu on hover for large screens */
 @media (min-width: 992px) {
   .navbar .dropdown:hover .dropdown-menu {
