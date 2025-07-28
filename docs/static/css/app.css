@@ -261,6 +261,11 @@ body.home-page footer {
   align-items: flex-start;
 }
 
+/* Override link color on the homepage footer */
+.footer-home .footer-nav .nav-link {
+  color: #000;
+}
+
 /* Footer navigation links */
 .footer-nav .nav-link {
   font-family: "Times New Roman", Times, serif;
