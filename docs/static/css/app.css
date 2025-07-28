@@ -56,7 +56,7 @@ a:hover {
 }
 
 body.home-page .navbar {
-  margin-top: 0.5in;
+  margin-top: 0;
 }
 
 /* Adjust navbar branding */
@@ -80,7 +80,7 @@ footer {
 }
 
 body.home-page footer {
-  margin-bottom: 2in;
+  margin-bottom: 1.5in;
 }
 
 /* Utility sections */
@@ -178,8 +178,8 @@ body.home-page footer {
 /* Translucent container over homepage background */
 .home-overlay {
   background-color: rgba(255, 255, 255, 0.85);
-  margin: 0 0 2in;
-  padding: 2rem 1rem;
+  margin: 0.5in 0 1in;
+  padding: 1rem;
   color: #000;
 }
 
