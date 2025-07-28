@@ -55,6 +55,10 @@ a:hover {
   padding: 1rem 0;
 }
 
+body.home-page .navbar {
+  margin-top: 0.5in;
+}
+
 /* Remove underline when hovering over header links */
 .navbar .nav-link:hover,
 .navbar .navbar-brand:hover {
@@ -64,6 +68,9 @@ a:hover {
 /* Footer */
 footer {
   font-size: 0.9rem;
+}
+
+body.home-page footer {
   margin-bottom: 2in;
 }
 
@@ -162,7 +169,7 @@ footer {
 /* Translucent container over homepage background */
 .home-overlay {
   background-color: rgba(255, 255, 255, 0.85);
-  margin: 1in 0 2in;
+  margin: 0 0 2in;
   padding: 2rem 1rem;
   color: #000;
 }
