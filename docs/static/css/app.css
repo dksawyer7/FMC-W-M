@@ -7,6 +7,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
 }
 
+body.home-page {
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+              url('../assets/images/b6e68641-5167-4bcc-b653-3d3339c5366c.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
 /* Color variables */
 :root {
   --primary-color: #00563B;
@@ -64,18 +72,7 @@ footer {
 }
 .hero.home-bg {
   position: relative;
-  background-image: url('../assets/images/b6e68641-5167-4bcc-b653-3d3339c5366c.jpg');
-  background-size: cover;
-  background-position: center;
   color: #fff;
-  isolation: isolate; /* ensure overlay layering */
-}
-.hero.home-bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: -1;
 }
 .section {
   padding: 3rem 0;
