@@ -77,10 +77,12 @@ body.home-page .navbar {
 /* Footer */
 footer {
   font-size: 0.9rem;
+  padding-top: calc(1.5rem + 0.25in) !important;
+  padding-bottom: calc(1.5rem + 0.25in) !important;
 }
 
 body.home-page footer {
-  margin-bottom: 1.5in;
+  margin-bottom: 0.5in;
 }
 
 /* Utility sections */
