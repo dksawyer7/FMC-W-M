@@ -249,3 +249,11 @@ body.home-page footer {
 .footer-brand .wm-serif {
   font-family: serif;
 }
+
+body.home-page .footer-brand {
+  margin-left: -2.5in;
+}
+
+body.home-page .footer-brand-text {
+  color: #000;
+}
