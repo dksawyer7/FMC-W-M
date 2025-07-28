@@ -64,6 +64,7 @@ a:hover {
 /* Footer */
 footer {
   font-size: 0.9rem;
+  margin-bottom: 2in;
 }
 
 /* Utility sections */
@@ -161,7 +162,7 @@ footer {
 /* Translucent container over homepage background */
 .home-overlay {
   background-color: rgba(255, 255, 255, 0.85);
-  margin: 2in 0;
+  margin: 1in 0 2in;
   padding: 2rem 1rem;
   color: #000;
 }
