@@ -22,6 +22,13 @@ body.about-page {
   background-position: center;
 }
 
+body.howwework-page {
+  background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+              url('../assets/images/aaaaead2-2275-4517-943f-34f3bfbdd455.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
 /* Color variables */
 :root {
   --primary-color: #00563B;
@@ -133,6 +140,10 @@ body.home-page footer {
 }
 body.about-page .hero {
   background-color: transparent;
+}
+body.howwework-page .hero {
+  background-color: transparent;
+  min-height: calc(100vh - 200px);
 }
 .section {
   padding: 3rem 0;
