@@ -68,6 +68,24 @@ body.home-page .navbar {
   height: 100px;
 }
 
+/* Custom brand text */
+.navbar-brand .brand-text {
+  line-height: 1;
+  width: fit-content;
+}
+
+.navbar-brand .brand-text .site-short-name {
+  font-family: serif;
+  font-size: 3rem;
+  display: block;
+}
+
+.navbar-brand .brand-text .site-full-name {
+  font-size: 0.9rem;
+  display: block;
+  width: 100%;
+}
+
 /* Remove underline when hovering over header links */
 .navbar .nav-link:hover,
 .navbar .navbar-brand:hover {
