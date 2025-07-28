@@ -59,6 +59,15 @@ body.home-page .navbar {
   margin-top: 0.5in;
 }
 
+/* Adjust navbar branding */
+.navbar-brand {
+  margin-left: -1.5in;
+}
+
+.navbar-brand img {
+  height: 60px;
+}
+
 /* Remove underline when hovering over header links */
 .navbar .nav-link:hover,
 .navbar .navbar-brand:hover {
