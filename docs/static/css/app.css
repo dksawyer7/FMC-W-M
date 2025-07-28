@@ -241,21 +241,24 @@ body.home-page footer {
   display: none;
 }
 
+.footer-home {
+  gap: 1rem;
+}
 /* Footer branding on the homepage */
-.footer-brand img {
+.footer-home img {
   height: 60px;
 }
 
-.footer-brand .wm-serif {
+.footer-home .wm-serif {
   font-family: serif;
 }
 
-body.home-page .footer-brand {
-  margin-left: -2.5in;
-}
 
-body.home-page .footer-brand-text {
+.footer-home .footer-brand-text {
   color: #000;
+}
+.footer-home .footer-nav {
+  align-items: flex-start;
 }
 
 /* Footer navigation links */
