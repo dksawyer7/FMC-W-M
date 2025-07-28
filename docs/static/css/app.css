@@ -15,6 +15,13 @@ body.home-page {
   background-position: center;
 }
 
+body.about-page {
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+              url('../assets/images/20caeb92-41b0-46c7-8ba1-7cc8ec72541e.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
 /* Color variables */
 :root {
   --primary-color: #00563B;
@@ -123,6 +130,9 @@ body.home-page footer {
   position: relative;
   color: #fff;
   background: none;
+}
+body.about-page .hero {
+  background-color: transparent;
 }
 .section {
   padding: 3rem 0;
