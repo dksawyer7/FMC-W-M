@@ -2,7 +2,7 @@
 
 ## Mission Statement
 
-The Financial Modeling Club at William & Mary is a collaborative, student-led organization dedicated to equipping members with the technical skills needed to excel in the classroom, stand out in internships, and thrive in competitive careers across the financial sector. Open to students of all experience levels, the club is designed to teach the fundamentals of Microsoft Excel and financial modeling tools essential for success in the corporate world. Our mission is not only to help students build a strong technical foundation, but also to support them throughout the recruiting process and guide them as they navigate their professional journeys. By fostering a hands-on, inclusive learning environment, we aim to give every member a competitive advantage in their career path.
+Training students in financial modeling through structured workshops, professional mentorship, and recruiting preparation for careers in finance.
 
 ## GitHub Pages
 
