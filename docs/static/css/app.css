@@ -257,3 +257,21 @@ body.home-page .footer-brand {
 body.home-page .footer-brand-text {
   color: #000;
 }
+
+/* Footer navigation links */
+.footer-nav .nav-link {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.8rem;
+  color: inherit;
+}
+
+.footer-nav .dropdown-toggle::after {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .footer-nav .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
