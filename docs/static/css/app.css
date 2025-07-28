@@ -208,7 +208,7 @@ body.home-page footer {
 
 /* Translucent container over homepage background */
 .home-overlay {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.75);
   margin: 0.5in 0 1in;
   padding: 1rem;
   color: #000;
