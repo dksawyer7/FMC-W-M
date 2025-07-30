@@ -320,3 +320,37 @@ body.howwework-page .howwework-box {
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
+
+/* Condensed layout adjustments to avoid scrolling on most pages */
+body.home-page .home-overlay {
+  margin: 0.25in 0;
+}
+
+body.home-page .hero.home-bg {
+  min-height: 25vh;
+}
+
+body.home-page .instagram-feed .insta-item img {
+  height: 120px;
+  object-fit: cover;
+}
+
+body.about-page .hero {
+  height: 25vh;
+}
+
+body.howwework-page .howwework-box {
+  margin-left: 2in;
+  margin-right: 2in;
+  min-height: 25vh;
+}
+
+body.speaker-page .section {
+  padding: 1rem 0;
+}
+
+body.home-page .section,
+body.about-page .section,
+body.howwework-page .section {
+  padding: 1rem 0;
+}
