@@ -54,22 +54,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     update();
   }
-
-  // Scale condensed pages to fit the viewport without scrolling
-  const scaledBody = document.querySelector('body.condensed-layout');
-  if (scaledBody) {
-    const BASE_WIDTH = 1024;
-    const BASE_HEIGHT = 768;
-
-    function applyScale() {
-      const scale = Math.min(
-        window.innerWidth / BASE_WIDTH,
-        window.innerHeight / BASE_HEIGHT
-      );
-      scaledBody.style.transform = `scale(${scale})`;
-    }
-
-    applyScale();
-    window.addEventListener('resize', applyScale);
-  }
 });
