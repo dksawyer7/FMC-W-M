@@ -354,3 +354,12 @@ body.about-page .section,
 body.howwework-page .section {
   padding: 1rem 0;
 }
+
+/* Fixed layout scaling to keep pages within one viewport */
+body.condensed-layout {
+  width: 1024px;
+  height: 768px;
+  overflow: hidden;
+  margin: 0;
+  transform-origin: top left;
+}
