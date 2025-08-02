@@ -9,11 +9,10 @@
 
 /* Liquid morph button styles */
 .liquid-morph-container {
+  /* Keep nav list compact without full-page height or background */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: #001;
 }
 
 .liquid-morph-element {
