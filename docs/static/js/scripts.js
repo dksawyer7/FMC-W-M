@@ -56,7 +56,44 @@ function initFMC() {
       row.dataset.duplicated = 'true';
     }
   });
+
+  setupTypeOnView();
 }
 
 document.addEventListener('DOMContentLoaded', initFMC);
 window.initFMC = initFMC;
+
+function setupTypeOnView() {
+  const selectors = 'main h1, main h2, main h3, main h4, main h5, main h6, main p, main li, main small, main span';
+  const elements = Array.from(document.querySelectorAll(selectors))
+    .filter(el => el.children.length === 0 && el.id !== 'intro-message');
+
+  elements.forEach(el => {
+    el.dataset.fulltext = el.textContent;
+    el.textContent = '';
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        if (el.dataset.typing) {
+          return;
+        }
+        el.dataset.typing = 'true';
+        const text = el.dataset.fulltext;
+        let i = 0;
+        const interval = setInterval(() => {
+          el.textContent = text.slice(0, i + 1);
+          i++;
+          if (i > text.length) {
+            clearInterval(interval);
+          }
+        }, 30);
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(el => observer.observe(el));
+}
