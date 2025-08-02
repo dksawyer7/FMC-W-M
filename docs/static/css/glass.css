@@ -10,6 +10,29 @@ body {
 
 }
 
+.team-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  animation: team-slideshow 60s infinite;
+}
+
+@keyframes team-slideshow {
+  0% {
+    background-image: url('../assets/images/20caeb92-41b0-46c7-8ba1-7cc8ec72541e.jpg');
+  }
+  33% {
+    background-image: url('../assets/images/297db81b-4a12-4c0b-b739-5fcb7aa892cc.jpg');
+  }
+  66% {
+    background-image: url('../assets/images/aaaaead2-2275-4517-943f-34f3bfbdd455.jpg');
+  }
+  100% {
+    background-image: url('../assets/images/b6e68641-5167-4bcc-b653-3d3339c5366c.jpg');
+  }
+}
+
 .glass {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 1rem;
@@ -106,7 +129,8 @@ body {
   justify-content: center;
   border-radius: 0.5rem;
   text-align: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
   border: 1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -114,9 +138,6 @@ body {
 }
 
 .card-back {
-
-  color: black;
-
   transform: rotateY(180deg);
 }
 
