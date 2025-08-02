@@ -1,3 +1,23 @@
+let typingObserver;
+
+function handleTyping(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.dataset.animated) {
+      const text = entry.target.dataset.message;
+      entry.target.textContent = '';
+      let i = 0;
+      const interval = setInterval(() => {
+        entry.target.textContent = text.slice(0, i + 1);
+        i++;
+        if (i === text.length) {
+          clearInterval(interval);
+        }
+      }, 50);
+      entry.target.dataset.animated = 'true';
+    }
+  });
+}
+
 function initFMC() {
   const list = document.getElementById('events-list');
   if (list && !list.dataset.loaded) {
@@ -21,22 +41,15 @@ function initFMC() {
       });
   }
 
-  const intro = document.getElementById('intro-message');
-  if (intro && !intro.dataset.animated) {
-    const text = intro.dataset.message;
-    intro.textContent = '';
-    setTimeout(() => {
-      let i = 0;
-      const interval = setInterval(() => {
-        intro.textContent = text.slice(0, i + 1);
-        i++;
-        if (i === text.length) {
-          clearInterval(interval);
-        }
-      }, 50);
-    }, 2000);
-    intro.dataset.animated = 'true';
+  if (!typingObserver) {
+    typingObserver = new IntersectionObserver(handleTyping, { threshold: 0.6 });
   }
+  document.querySelectorAll('[data-message]').forEach(el => {
+    if (!el.dataset.observeBound) {
+      typingObserver.observe(el);
+      el.dataset.observeBound = 'true';
+    }
+  });
 
   const PLACEHOLDER = 'https://unsplash.it/500/500';
   document.querySelectorAll('img').forEach(img => {
