@@ -17,8 +17,8 @@
 }
 
 .liquid-morph-element {
-  width: 250px;
-  height: 100px;
+  width: 120px;
+  height: 40px;
   background: #0a2342;
   display: flex;
   justify-content: center;
@@ -31,7 +31,7 @@
 
 .liquid-morph-element span {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1rem;
   position: relative;
   z-index: 2;
 }
