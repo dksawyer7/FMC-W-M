@@ -114,7 +114,9 @@ body {
 }
 
 .card-back {
-  color: var(--openai-white);
+
+  color: black;
+
   transform: rotateY(180deg);
 }
 
