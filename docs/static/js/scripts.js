@@ -6,14 +6,14 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(events => {
         events.forEach(evt => {
           const li = document.createElement('li');
-          li.className = 'list-group-item d-flex justify-content-between align-items-center';
-          li.innerHTML = `<span>${evt.date} - ${evt.title}</span><span class="text-muted">${evt.location}</span>`;
+          li.className = 'flex justify-between items-center border-b p-2';
+          li.innerHTML = `<span>${evt.date} - ${evt.title}</span><span class="text-gray-500">${evt.location}</span>`;
           list.appendChild(li);
         });
       })
       .catch(() => {
         const li = document.createElement('li');
-        li.className = 'list-group-item';
+        li.className = 'border-b p-2';
         li.textContent = 'Unable to load events.';
         list.appendChild(li);
       });
