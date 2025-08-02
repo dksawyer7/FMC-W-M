@@ -105,3 +105,33 @@
   color: white;
   transform: rotateY(180deg);
 }
+
+/* Instagram marquee */
+.insta-marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+.insta-row {
+  display: flex;
+  width: max-content;
+}
+
+.insta-row-fast {
+  animation: insta-scroll 20s linear infinite;
+}
+
+.insta-row-slow {
+  animation: insta-scroll 30s linear infinite;
+  animation-delay: -15s;
+  margin-top: 1rem;
+}
+
+@keyframes insta-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
