@@ -141,11 +141,23 @@ body {
   margin-top: 1rem;
 }
 
-@keyframes insta-scroll {
-  0% {
-    transform: translateX(0);
+  @keyframes insta-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
-  100% {
-    transform: translateX(-50%);
+
+/* Typing animation for headings */
+.typing::after {
+  content: '|';
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
 }

@@ -91,6 +91,34 @@ function initFMC() {
     });
     document.body.dataset.scrollBound = 'true';
   }
+  initScrollTyping();
+}
+
+function initScrollTyping() {
+  const targets = document.querySelectorAll('h1, h2, h3');
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        if (el.dataset.typingAnimated) return;
+        obs.unobserve(el);
+        const text = el.textContent.trim();
+        el.textContent = '';
+        el.classList.add('typing');
+        let i = 0;
+        const interval = setInterval(() => {
+          el.textContent += text[i];
+          i++;
+          if (i >= text.length) {
+            clearInterval(interval);
+            el.classList.remove('typing');
+            el.dataset.typingAnimated = 'true';
+          }
+        }, 50);
+      }
+    });
+  }, { threshold: 0.6 });
+  targets.forEach(el => observer.observe(el));
 }
 
 document.addEventListener('DOMContentLoaded', initFMC);
