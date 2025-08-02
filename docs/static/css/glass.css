@@ -7,22 +7,20 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Liquid morph button styles */
+/* Liquid morph navigation styles */
 .liquid-morph-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: #001;
+  gap: 1rem;
 }
 
 .liquid-morph-element {
-  width: 250px;
-  height: 100px;
   background: #0a2342;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0.5rem 1rem;
   position: relative;
   border-radius: 50px;
   overflow: hidden;
@@ -31,7 +29,7 @@
 
 .liquid-morph-element span {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1rem;
   position: relative;
   z-index: 2;
 }
