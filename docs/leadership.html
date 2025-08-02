@@ -5,261 +5,146 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leadership – Financial Modeling Club at William & Mary</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="static/css/app.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="d-flex flex-column min-vh-100">
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="static/assets/images/logo.png" alt="FMC Logo" height="100">
-        <div class="brand-text ms-2">
-          <span class="site-short-name">FMCWM</span>
-          <span class="site-full-name">Financial Modeling Club at William & Mary</span>
-        </div>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="howwework.html" id="aboutDropdown">About Us</a>
-            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-              <li><a class="dropdown-item" href="about.html">Background</a></li>
-              <li><a class="dropdown-item" href="speaker.html">Speaker of the Week</a></li>
+<body class="flex flex-col min-h-screen">
+  <nav class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <a href="index.html" class="flex items-center">
+          <img src="static/assets/images/logo.png" alt="FMC Logo" class="h-24">
+          <div class="ml-2">
+            <span class="block text-3xl font-serif">FMCWM</span>
+            <span class="block text-sm">Financial Modeling Club at William & Mary</span>
+          </div>
+        </a>
+        <ul class="flex space-x-4">
+          <li><a href="index.html" class="text-gray-700 hover:text-green-700">Home</a></li>
+          <li class="relative group">
+            <a href="howwework.html" class="text-gray-700 hover:text-green-700">About Us</a>
+            <ul class="absolute left-0 mt-2 hidden group-hover:block bg-white border rounded shadow">
+              <li><a href="about.html" class="block px-4 py-2 hover:bg-gray-100">Background</a></li>
+              <li><a href="speaker.html" class="block px-4 py-2 hover:bg-gray-100">Speaker of the Week</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" href="leadership.html">Leadership</a></li>
-          <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
-          <li class="nav-item">
-            <a class="nav-link ms-2" href="join.html">
-              Join Now
-            </a>
-          </li>
+          <li><a href="leadership.html" class="text-gray-700 hover:text-green-700">Leadership</a></li>
+          <li><a href="schedule.html" class="text-gray-700 hover:text-green-700">Schedule</a></li>
+          <li><a href="join.html" class="ml-2 px-4 py-2 bg-green-700 text-white rounded hover:bg-green-800">Join Now</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Page Content -->
-  <main class="flex-fill container py-5">
-    <!-- Executive Board -->
-    <section class="section bg-light">
-      <div class="container">
- 
-        <h2 class="h3 mb-4 text-center">Executive Board</h2>
-        <p style="text-align: left;">
-          The William &amp; Mary FMC E&#8209;Board manages the day&#8209;to&#8209;day
-          operations and strategic direction of the club. We collaborate closely
-          to design and deliver weekly workshops, events, and networking
-          opportunities. Each member brings hands&#8209;on financial modeling
-          experience gained through internships in the business world, ensuring
-          they&rsquo;ve applied modeling techniques in real professional settings.
-          Feel free to connect with any of our E&#8209;Board members to learn more
-          about their specific roles and experiences!
-        </p>
- 
-        <div class="p-4 mb-5 border rounded bg-white">
-          <div class="row g-4 justify-content-center">
-            <div class="col-md-3">
-              <div class="card person-card h-100 text-center shadow-sm">
-                <img src="static/assets/images/DSawyer.jpeg" class="card-img-top" alt="Davis K. Sawyer">
-                <div class="p-3 text-center">
-                  <p class="mb-1">Davis K. Sawyer</p>
-                  <p class="mb-1">President &amp; Founder</p>
-                  <p class="mb-1">Finance '27</p>
-                  <a href="https://www.linkedin.com/in/davis-sawyer-wm2027/" target="_blank" class="text-decoration-none">
-                    <i class="fab fa-linkedin fa-lg text-primary"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- VP Financial Modeling -->
-              <div class="col-md-3">
-                <div class="card person-card h-100 text-center shadow-sm">
-                  <img src="static/assets/images/100_0379 (2) - Edited - Edited - Edited.jpg" class="card-img-top" alt="Jack Aitken">
-                  <div class="p-3 text-center">
-                    <p class="mb-1">Jack W. Aitken</p>
-                    <p class="mb-1">VP, Financial Modeling</p>
-                    <p class="mb-1">Computer Science '27</p>
-                    <a href="https://www.linkedin.com/in/jack-aitken-b516a5282/" target="_blank" class="text-decoration-none">
-                      <i class="fab fa-linkedin fa-lg text-primary"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            <!-- VP Operations -->
-            <div class="col-md-3">
-              <div class="card person-card h-100 text-center shadow-sm">
-                <img src="static/assets/images/IMG_9764 (1) - Edited - Edited.jpg" class="card-img-top" alt="Daniel R. Butler">
-                <div class="p-3 text-center">
-                  <p class="mb-1">Daniel R. Butler</p>
-                  <p class="mb-1">VP, Operations</p>
-                  <p class="mb-1">Applied Math '25</p>
-                  <p class="mb-1">MS Computer Science '27</p>
-                  <a href="https://www.linkedin.com/in/daniel-butler-a1ba3a296/" target="_blank" class="text-decoration-none">
-                    <i class="fab fa-linkedin fa-lg text-primary"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- VP Mentorship -->
-            <div class="col-md-3">
-              <div class="card person-card h-100 text-center shadow-sm">
-                <img src="static/assets/images/IMG_3556 - Edited.jpg" class="card-img-top" alt="Tom Chesnut">
-                <div class="p-3 text-center">
-                  <p class="mb-1">Tom G. Chesnut</p>
-                  <p class="mb-1">VP, Mentorship</p>
-                  <p class="mb-1">History &amp; Religion '27</p>
-                  <a href="https://www.linkedin.com/in/tom-chesnut-2593a329b/" target="_blank" class="text-decoration-none">
-                    <i class="fab fa-linkedin fa-lg text-primary"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row g-4 justify-content-center mt-0">
-            <!-- VP Corporate Relations -->
-            <div class="col-md-4">
-              <div class="card person-card h-100 text-center shadow-sm">
-                <img src="static/assets/images/IMG_9772 - Edited - Edited - Edited.jpg" class="card-img-top" alt="Alex B. Aitken">
-                <div class="p-3 text-center">
-                  <p class="mb-1">Alex B. Aitken</p>
-                  <p class="mb-1">VP, Corporate Relations</p>
-                  <p class="mb-1">Finance '26</p>
-                  <a href="https://www.linkedin.com/in/alex-aitken-1b8b80271/" target="_blank" class="text-decoration-none">
-                    <i class="fab fa-linkedin fa-lg text-primary"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- VP Marketing -->
-            <div class="col-md-4">
-              <div class="card person-card h-100 text-center shadow-sm">
-                <img src="static/assets/images/Luke Archey-modified - Edited.jpg" class="card-img-top" alt="Luke Archey">
-                <div class="p-3 text-center">
-                  <p class="mb-1">Luke X. Archey</p>
-                  <p class="mb-1">VP, Marketing</p>
-                  <p class="mb-1">Economics '26</p>
-                  <a href="https://www.linkedin.com/in/luke-archey-a23668263/" target="_blank" class="text-decoration-none">
-                    <i class="fab fa-linkedin fa-lg text-primary"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- VP Finance -->
-            <div class="col-md-4">
-              <div class="card person-card h-100 text-center shadow-sm">
-                <img src="static/assets/images/IMG_9763 - Edited.jpg" class="card-img-top" alt="Ben L. Michaud">
-                <div class="p-3 text-center">
-                  <p class="mb-1">Ben L. Michaud</p>
-                  <p class="mb-1">VP, Finance</p>
-                  <p class="mb-1">Economics '26</p>
-                  <a href="https://www.linkedin.com/in/benmichaud1/" target="_blank" class="text-decoration-none">
-                    <i class="fab fa-linkedin fa-lg text-primary"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+  <main class="flex-grow py-8">
+    <section class="max-w-6xl mx-auto px-4">
+      <h1 class="text-3xl font-bold text-center mb-6">Executive Board</h1>
+      <p class="mb-8 text-left">
+        The William &amp; Mary FMC E‑Board manages the day‑to‑day operations and strategic direction of the club. We collaborate closely to design and deliver weekly workshops, events, and networking opportunities. Each member brings hands‑on financial modeling experience gained through internships in the business world, ensuring they’ve applied modeling techniques in real professional settings. Feel free to connect with any of our E‑Board members to learn more about their specific roles and experiences!
+      </p>
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+        <div class="bg-white shadow p-4 text-center">
+          <img src="static/assets/images/DSawyer.jpeg" alt="Davis K. Sawyer" class="mx-auto h-40 w-40 object-cover">
+          <p class="mt-2 font-semibold">Davis K. Sawyer</p>
+          <p class="text-sm">President &amp; Founder</p>
+          <p class="text-sm">Finance '27</p>
+          <a href="https://www.linkedin.com/in/davis-sawyer-wm2027/" target="_blank" class="text-blue-600"><i class="fab fa-linkedin fa-lg"></i></a>
         </div>
-
+        <div class="bg-white shadow p-4 text-center">
+          <img src="static/assets/images/100_0379 (2) - Edited - Edited - Edited.jpg" alt="Jack Aitken" class="mx-auto h-40 w-40 object-cover">
+          <p class="mt-2 font-semibold">Jack W. Aitken</p>
+          <p class="text-sm">VP, Financial Modeling</p>
+          <p class="text-sm">Computer Science '27</p>
+          <a href="https://www.linkedin.com/in/jack-aitken-b516a5282/" target="_blank" class="text-blue-600"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+        <div class="bg-white shadow p-4 text-center">
+          <img src="static/assets/images/IMG_9764 (1) - Edited - Edited.jpg" alt="Daniel R. Butler" class="mx-auto h-40 w-40 object-cover">
+          <p class="mt-2 font-semibold">Daniel R. Butler</p>
+          <p class="text-sm">VP, Operations</p>
+          <p class="text-sm">Applied Math '25</p>
+          <p class="text-sm">MS Computer Science '27</p>
+          <a href="https://www.linkedin.com/in/daniel-butler-a1ba3a296/" target="_blank" class="text-blue-600"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+        <div class="bg-white shadow p-4 text-center">
+          <img src="static/assets/images/IMG_3556 - Edited.jpg" alt="Tom Chesnut" class="mx-auto h-40 w-40 object-cover">
+          <p class="mt-2 font-semibold">Tom G. Chesnut</p>
+          <p class="text-sm">VP, Mentorship</p>
+          <p class="text-sm">History &amp; Religion '27</p>
+          <a href="https://www.linkedin.com/in/tom-chesnut-2593a329b/" target="_blank" class="text-blue-600"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+        <div class="bg-white shadow p-4 text-center">
+          <img src="static/assets/images/Luke_Archey.jpeg" alt="Luke X. Archey" class="mx-auto h-40 w-40 object-cover">
+          <p class="mt-2 font-semibold">Luke X. Archey</p>
+          <p class="text-sm">VP, Marketing</p>
+          <p class="text-sm">Economics '26</p>
+          <a href="https://www.linkedin.com/in/luke-archey-a23668263/" target="_blank" class="text-blue-600"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+        <div class="bg-white shadow p-4 text-center">
+          <img src="static/assets/images/IMG_9763 - Edited.jpg" alt="Ben L. Michaud" class="mx-auto h-40 w-40 object-cover">
+          <p class="mt-2 font-semibold">Ben L. Michaud</p>
+          <p class="text-sm">VP, Finance</p>
+          <p class="text-sm">Economics '26</p>
+          <a href="https://www.linkedin.com/in/benmichaud1/" target="_blank" class="text-blue-600"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
       </div>
     </section>
 
-    <section class="section bg-light" style="margin-top: -3rem;">
-      <div class="container">
-        <h2 class="h3 mb-3 text-center">Directors</h2>
-        <p style="text-align: left;">
-          Directors support and carry out the goals set by
-          the executive board. They work under the board to
-          keep things running smoothly and help ensure every
-          member has a great experience.
-        </p>
-        <div class="p-4 border rounded bg-white">
-          <div class="row g-4">
-            <!-- Director, Marketing -->
-            <div class="col-md-4">
-              <div class="card person-card h-100 text-center shadow-sm">
-                <img src="static/assets/images/297db81b-4a12-4c0b-b739-5fcb7aa892cc.jpg" class="card-img-top" alt="Audrey P. Sims">
-                <div class="p-3 text-center">
-                  <p class="mb-1">Audrey P. Sims</p>
-                  <p class="mb-1">Director, Marketing</p>
-                  <p class="mb-1">Finance '27</p>
-                  <a href="https://www.linkedin.com/in/audreysims" target="_blank" class="text-decoration-none">
-                    <i class="fab fa-linkedin fa-lg text-primary"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- Director, Finance -->
-            <div class="col-md-4">
-              <div class="card person-card h-100 text-center shadow-sm">
-                <img src="static/assets/images/TJander.jpeg" class="card-img-top" alt="Tristan C. Jander">
-                <div class="p-3 text-center">
-                  <p class="mb-1">Tristan C. Jander</p>
-                  <p class="mb-1">Director, Finance</p>
-                  <p class="mb-1">Accounting '27</p>
-                  <a href="https://www.linkedin.com/in/tristan-jander/" target="_blank" class="text-decoration-none">
-                    <i class="fab fa-linkedin fa-lg text-primary"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- Director of Operations -->
-            <div class="col-md-4">
-              <div class="card person-card h-100 text-center shadow-sm">
-                <img src="static/assets/images/AKochell.JPG" class="card-img-top" alt="Alex R. Kochell">
-                <div class="p-3 text-center">
-                  <p class="mb-1">Alex R. Kochell</p>
-                  <p class="mb-1">Director, Operations</p>
-                  <p class="mb-1">Finance '27</p>
-                  <a href="https://www.linkedin.com/in/alex-kochell-8925492b9/" target="_blank" class="text-decoration-none">
-                    <i class="fab fa-linkedin fa-lg text-primary"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section class="max-w-6xl mx-auto px-4 mt-12">
+      <h2 class="text-3xl font-bold text-center mb-6">Directors</h2>
+      <p class="mb-8 text-left">
+        Directors support and carry out the goals set by the executive board. They work under the board to keep things running smoothly and help ensure every member has a great experience.
+      </p>
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+        <div class="bg-white shadow p-4 text-center">
+          <img src="static/assets/images/297db81b-4a12-4c0b-b739-5fcb7aa892cc.jpg" alt="Audrey P. Sims" class="mx-auto h-40 w-40 object-cover">
+          <p class="mt-2 font-semibold">Audrey P. Sims</p>
+          <p class="text-sm">Director, Marketing</p>
+          <p class="text-sm">Finance '27</p>
+          <a href="https://www.linkedin.com/in/audreysims" target="_blank" class="text-blue-600"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+        <div class="bg-white shadow p-4 text-center">
+          <img src="static/assets/images/TJander.jpeg" alt="Tristan C. Jander" class="mx-auto h-40 w-40 object-cover">
+          <p class="mt-2 font-semibold">Tristan C. Jander</p>
+          <p class="text-sm">Director, Finance</p>
+          <p class="text-sm">Accounting '27</p>
+          <a href="https://www.linkedin.com/in/tristan-jander/" target="_blank" class="text-blue-600"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+        <div class="bg-white shadow p-4 text-center">
+          <img src="static/assets/images/AKochell.JPG" alt="Alex R. Kochell" class="mx-auto h-40 w-40 object-cover">
+          <p class="mt-2 font-semibold">Alex R. Kochell</p>
+          <p class="text-sm">Director, Operations</p>
+          <p class="text-sm">Finance '27</p>
+          <a href="https://www.linkedin.com/in/alex-kochell-8925492b9/" target="_blank" class="text-blue-600"><i class="fab fa-linkedin fa-lg"></i></a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-light py-4 mt-auto">
-  <div class="container d-flex align-items-center justify-content-center flex-wrap footer-home">
-    <img src="static/assets/images/logo.png" alt="FMC Logo" height="60">
-    <div class="ms-2 text-start footer-brand-text">
-      <div>Financial Modeling Club</div>
-      <div class="wm-serif">at William &amp; Mary</div>
+  <footer class="bg-gray-100 py-8 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-center gap-4">
+      <img src="static/assets/images/logo.png" alt="FMC Logo" class="h-16">
+      <div class="text-center">
+        <div>Financial Modeling Club</div>
+        <div class="font-serif">at William &amp; Mary</div>
+      </div>
+      <ul class="flex flex-col md:flex-row md:space-x-4">
+        <li><a class="text-gray-700 hover:text-green-700" href="index.html">Home</a></li>
+        <li class="relative group">
+          <a class="text-gray-700 hover:text-green-700" href="howwework.html">About Us</a>
+          <ul class="absolute left-0 mt-2 hidden group-hover:block bg-white border rounded shadow">
+            <li><a href="about.html" class="block px-4 py-2 hover:bg-gray-100">Background</a></li>
+            <li><a href="speaker.html" class="block px-4 py-2 hover:bg-gray-100">Speaker of the Week</a></li>
+          </ul>
+        </li>
+        <li><a class="text-gray-700 hover:text-green-700" href="leadership.html">Leadership</a></li>
+        <li><a class="text-gray-700 hover:text-green-700" href="schedule.html">Schedule</a></li>
+        <li><a class="text-gray-700 hover:text-green-700" href="join.html">Join Now</a></li>
+      </ul>
+      <a href="https://www.instagram.com/financialmodelingclubwm" target="_blank" class="text-4xl text-pink-600 hover:text-pink-700"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:financialmodel@wm.edu" class="text-gray-700 hover:text-green-700">financialmodel@wm.edu</a>
     </div>
-    <ul class="nav flex-column footer-nav mb-0 ms-4">
-      <li class="nav-item"><a class="nav-link p-0 mb-1" href="index.html">Home</a></li>
-      <li class="nav-item dropdown dropup">
-        <a class="nav-link dropdown-toggle p-0 mb-1" href="howwework.html" id="footerAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
-        <ul class="dropdown-menu" aria-labelledby="footerAbout">
-          <li><a class="dropdown-item" href="about.html">Background</a></li>
-          <li><a class="dropdown-item" href="speaker.html">Speaker of the Week</a></li>
-        </ul>
-      </li>
-      <li class="nav-item"><a class="nav-link p-0 mb-1" href="leadership.html">Leadership</a></li>
-      <li class="nav-item"><a class="nav-link p-0 mb-1" href="schedule.html">Schedule</a></li>
-      <li class="nav-item"><a class="nav-link p-0" href="join.html">Join Now</a></li>
-    </ul>
-    <a href="https://www.instagram.com/financialmodelingclubwm" target="_blank" class="ms-4"><i class="fab fa-instagram fa-4x instagram-icon"></i></a>
-    <a href="mailto:financialmodel@wm.edu" class="ms-2">financialmodel@wm.edu</a>
-  </div>
-</footer>
+  </footer>
 
-
-  <!-- Bootstrap & Vanilla JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="static/js/scripts.js"></script>
 </body>
 </html>
