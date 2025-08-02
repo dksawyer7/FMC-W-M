@@ -2,7 +2,7 @@
 :root {
   --openai-black: #000000;
   --openai-white: #FFFFFF;
-  --chatgpt-green: #00A67E;
+  --accent-gray: #808080;
 
 }
 body {
@@ -31,7 +31,7 @@ body {
 }
 
 .liquid-morph-element {
-  background: var(--chatgpt-green);
+  background: var(--accent-gray);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,9 +57,9 @@ body {
   width: 100%;
   height: 100%;
   background: conic-gradient(
-    var(--chatgpt-green) 0deg,
+    var(--accent-gray) 0deg,
     var(--openai-black) 120deg,
-    var(--chatgpt-green) 240deg
+    var(--accent-gray) 240deg
   );
   transition: all 0.6s ease;
   opacity: 0;
