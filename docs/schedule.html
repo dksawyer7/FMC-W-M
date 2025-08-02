@@ -6,10 +6,11 @@
   <title>Schedule – Financial Modeling Club at William & Mary</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+  <link href="static/css/glass.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex flex-col min-h-screen">
-  <nav class="bg-white shadow">
+<body class="flex flex-col min-h-screen bg-gradient-to-br from-green-200 to-green-50">
+  <nav class="glass shadow rounded-none">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between items-center py-4">
         <a href="index.html" class="flex items-center">
@@ -23,7 +24,7 @@
           <li><a href="index.html" class="text-gray-700 hover:text-green-700">Home</a></li>
           <li class="relative group">
             <a href="howwework.html" class="text-gray-700 hover:text-green-700">About Us</a>
-            <ul class="absolute left-0 mt-2 hidden group-hover:block bg-white border rounded shadow">
+            <ul class="absolute left-0 mt-2 hidden group-hover:block glass">
               <li><a href="about.html" class="block px-4 py-2 hover:bg-gray-100">Background</a></li>
               <li><a href="speaker.html" class="block px-4 py-2 hover:bg-gray-100">Speaker of the Week</a></li>
             </ul>
@@ -36,12 +37,12 @@
     </div>
   </nav>
 
-  <main class="flex-grow py-8">
+  <main class="flex-grow py-8 glass m-4">
     <h1 class="text-3xl font-bold mb-4 text-center">Upcoming Events</h1>
     <ul id="events-list" class="max-w-xl mx-auto"></ul>
   </main>
 
-  <footer class="bg-gray-100 py-8 mt-auto">
+  <footer class="glass py-8 mt-auto rounded-none">
     <div class="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-center gap-4">
       <img src="static/assets/images/logo.png" alt="FMC Logo" class="h-16">
       <div class="text-center">
@@ -52,7 +53,7 @@
         <li><a class="text-gray-700 hover:text-green-700" href="index.html">Home</a></li>
         <li class="relative group">
           <a class="text-gray-700 hover:text-green-700" href="howwework.html">About Us</a>
-          <ul class="absolute left-0 mt-2 hidden group-hover:block bg-white border rounded shadow">
+          <ul class="absolute left-0 mt-2 hidden group-hover:block glass">
             <li><a href="about.html" class="block px-4 py-2 hover:bg-gray-100">Background</a></li>
             <li><a href="speaker.html" class="block px-4 py-2 hover:bg-gray-100">Speaker of the Week</a></li>
           </ul>
