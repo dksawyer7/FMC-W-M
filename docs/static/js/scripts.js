@@ -46,28 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-
-  const slider = document.getElementById('instaSlider');
-  if (slider) {
-    const track = slider.querySelector('.insta-track');
-    const items = slider.querySelectorAll('.insta-item');
-    const visible = 5;
-    let index = 0;
-
-    function update() {
-      track.style.transform = `translateX(-${index * (100 / visible)}%)`;
-    }
-
-    slider.querySelector('.insta-next').addEventListener('click', () => {
-      index = (index + 1) % items.length;
-      update();
-    });
-
-    slider.querySelector('.insta-prev').addEventListener('click', () => {
-      index = (index - 1 + items.length) % items.length;
-      update();
-    });
-
-    update();
-  }
+  const instaRows = document.querySelectorAll('.insta-row');
+  instaRows.forEach(row => {
+    row.innerHTML += row.innerHTML;
+  });
 });
