@@ -21,21 +21,28 @@ function initFMC() {
       });
   }
 
-  const intro = document.getElementById('intro-message');
-  if (intro && !intro.dataset.animated) {
-    const text = intro.dataset.message;
-    intro.textContent = '';
-    setTimeout(() => {
-      let i = 0;
-      const interval = setInterval(() => {
-        intro.textContent = text.slice(0, i + 1);
-        i++;
-        if (i === text.length) {
-          clearInterval(interval);
+  const typeTargets = Array.from(document.querySelectorAll('[data-typing]')).filter(el => !el.dataset.animated);
+  if (typeTargets.length) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.dataset.animated) {
+          const el = entry.target;
+          const text = el.dataset.typing;
+          el.textContent = '';
+          let i = 0;
+          const interval = setInterval(() => {
+            el.textContent = text.slice(0, i + 1);
+            i++;
+            if (i === text.length) {
+              clearInterval(interval);
+            }
+          }, 50);
+          el.dataset.animated = 'true';
+          observer.unobserve(el);
         }
-      }, 50);
-    }, 2000);
-    intro.dataset.animated = 'true';
+      });
+    }, { threshold: 0.5 });
+    typeTargets.forEach(el => observer.observe(el));
   }
 
   const PLACEHOLDER = 'https://unsplash.it/500/500';
