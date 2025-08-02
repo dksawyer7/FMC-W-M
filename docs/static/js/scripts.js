@@ -56,6 +56,41 @@ function initFMC() {
       row.dataset.duplicated = 'true';
     }
   });
+
+  if (!document.body.dataset.scrollBound) {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href').slice(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          e.preventDefault();
+          const start = window.scrollY;
+          const end = target.getBoundingClientRect().top + start;
+          const duration = 600;
+          const startTime = performance.now();
+
+          function easeInOutQuad(t) {
+            return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+          }
+
+          function step() {
+            const now = performance.now();
+            const time = Math.min(1, (now - startTime) / duration);
+            const eased = easeInOutQuad(time);
+            window.scrollTo(0, start + (end - start) * eased);
+            if (time < 1) {
+              requestAnimationFrame(step);
+            } else {
+              window.location.hash = targetId;
+            }
+          }
+
+          requestAnimationFrame(step);
+        }
+      });
+    });
+    document.body.dataset.scrollBound = 'true';
+  }
 }
 
 document.addEventListener('DOMContentLoaded', initFMC);
