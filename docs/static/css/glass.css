@@ -13,6 +13,11 @@ body {
   background-attachment: fixed;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .glass {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 1rem;
@@ -162,5 +167,15 @@ body {
 @keyframes blink {
   50% {
     opacity: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .card {
+    width: 100%;
+    height: auto;
+  }
+  .card-inner {
+    height: 100%;
   }
 }
