@@ -5,82 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Schedule – Financial Modeling Club at William & Mary</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="static/css/app.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="d-flex flex-column min-vh-100">
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="static/assets/images/logo.png" alt="FMC Logo" height="100">
-        <div class="brand-text ms-2">
-          <span class="site-short-name">FMCWM</span>
-          <span class="site-full-name">Financial Modeling Club at William & Mary</span>
-        </div>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="howwework.html" id="aboutDropdown">About Us</a>
-            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-              <li><a class="dropdown-item" href="about.html">Background</a></li>
-              <li><a class="dropdown-item" href="speaker.html">Speaker of the Week</a></li>
+<body class="flex flex-col min-h-screen">
+  <nav class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <a href="index.html" class="flex items-center">
+          <img src="static/assets/images/logo.png" alt="FMC Logo" class="h-24">
+          <div class="ml-2">
+            <span class="block text-3xl font-serif">FMCWM</span>
+            <span class="block text-sm">Financial Modeling Club at William & Mary</span>
+          </div>
+        </a>
+        <ul class="flex space-x-4">
+          <li><a href="index.html" class="text-gray-700 hover:text-green-700">Home</a></li>
+          <li class="relative group">
+            <a href="howwework.html" class="text-gray-700 hover:text-green-700">About Us</a>
+            <ul class="absolute left-0 mt-2 hidden group-hover:block bg-white border rounded shadow">
+              <li><a href="about.html" class="block px-4 py-2 hover:bg-gray-100">Background</a></li>
+              <li><a href="speaker.html" class="block px-4 py-2 hover:bg-gray-100">Speaker of the Week</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" href="leadership.html">Leadership</a></li>
-          <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
-          <li class="nav-item">
-            <a class="nav-link ms-2" href="join.html">
-              Join Now
-            </a>
-          </li>
+          <li><a href="leadership.html" class="text-gray-700 hover:text-green-700">Leadership</a></li>
+          <li><a href="schedule.html" class="text-gray-700 hover:text-green-700">Schedule</a></li>
+          <li><a href="join.html" class="ml-2 px-4 py-2 bg-green-700 text-white rounded hover:bg-green-800">Join Now</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Page Content -->
-  <main class="flex-fill container py-5">
-    <h1 class="h3 mb-4 text-center">Upcoming Events</h1>
-    <ul id="events-list" class="list-group mx-auto" style="max-width: 600px;"></ul>
+  <main class="flex-grow py-8">
+    <h1 class="text-3xl font-bold mb-4 text-center">Upcoming Events</h1>
+    <ul id="events-list" class="max-w-xl mx-auto"></ul>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-light py-4 mt-auto">
-  <div class="container d-flex align-items-center justify-content-center flex-wrap footer-home">
-    <img src="static/assets/images/logo.png" alt="FMC Logo" height="60">
-    <div class="ms-2 text-start footer-brand-text">
-      <div>Financial Modeling Club</div>
-      <div class="wm-serif">at William &amp; Mary</div>
+  <footer class="bg-gray-100 py-8 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-center gap-4">
+      <img src="static/assets/images/logo.png" alt="FMC Logo" class="h-16">
+      <div class="text-center">
+        <div>Financial Modeling Club</div>
+        <div class="font-serif">at William &amp; Mary</div>
+      </div>
+      <ul class="flex flex-col md:flex-row md:space-x-4">
+        <li><a class="text-gray-700 hover:text-green-700" href="index.html">Home</a></li>
+        <li class="relative group">
+          <a class="text-gray-700 hover:text-green-700" href="howwework.html">About Us</a>
+          <ul class="absolute left-0 mt-2 hidden group-hover:block bg-white border rounded shadow">
+            <li><a href="about.html" class="block px-4 py-2 hover:bg-gray-100">Background</a></li>
+            <li><a href="speaker.html" class="block px-4 py-2 hover:bg-gray-100">Speaker of the Week</a></li>
+          </ul>
+        </li>
+        <li><a class="text-gray-700 hover:text-green-700" href="leadership.html">Leadership</a></li>
+        <li><a class="text-gray-700 hover:text-green-700" href="schedule.html">Schedule</a></li>
+        <li><a class="text-gray-700 hover:text-green-700" href="join.html">Join Now</a></li>
+      </ul>
+      <a href="https://www.instagram.com/financialmodelingclubwm" target="_blank" class="text-4xl text-pink-600 hover:text-pink-700"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:financialmodel@wm.edu" class="text-gray-700 hover:text-green-700">financialmodel@wm.edu</a>
     </div>
-    <ul class="nav flex-column footer-nav mb-0 ms-4">
-      <li class="nav-item"><a class="nav-link p-0 mb-1" href="index.html">Home</a></li>
-      <li class="nav-item dropdown dropup">
-        <a class="nav-link dropdown-toggle p-0 mb-1" href="howwework.html" id="footerAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
-        <ul class="dropdown-menu" aria-labelledby="footerAbout">
-          <li><a class="dropdown-item" href="about.html">Background</a></li>
-          <li><a class="dropdown-item" href="speaker.html">Speaker of the Week</a></li>
-        </ul>
-      </li>
-      <li class="nav-item"><a class="nav-link p-0 mb-1" href="leadership.html">Leadership</a></li>
-      <li class="nav-item"><a class="nav-link p-0 mb-1" href="schedule.html">Schedule</a></li>
-      <li class="nav-item"><a class="nav-link p-0" href="join.html">Join Now</a></li>
-    </ul>
-    <a href="https://www.instagram.com/financialmodelingclubwm" target="_blank" class="ms-4"><i class="fab fa-instagram fa-4x instagram-icon"></i></a>
-    <a href="mailto:financialmodel@wm.edu" class="ms-2">financialmodel@wm.edu</a>
-  </div>
-</footer>
+  </footer>
 
-
-  <!-- Bootstrap & Vanilla JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="static/js/scripts.js"></script>
 </body>
 </html>
