@@ -19,6 +19,22 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 
+  const intro = document.getElementById('intro-message');
+  if (intro) {
+    const text = intro.dataset.message;
+    intro.textContent = '';
+    setTimeout(() => {
+      let i = 0;
+      const interval = setInterval(() => {
+        intro.textContent = text.slice(0, i + 1);
+        i++;
+        if (i === text.length) {
+          clearInterval(interval);
+        }
+      }, 50);
+    }, 2000);
+  }
+
   const PLACEHOLDER = 'https://unsplash.it/500/500';
   document.querySelectorAll('img').forEach(img => {
     if (!img.getAttribute('src')) {
