@@ -21,8 +21,19 @@ function initFMC() {
       });
   }
 
-  const typeTargets = Array.from(document.querySelectorAll('[data-typing]')).filter(el => !el.dataset.animated);
-  if (typeTargets.length) {
+  const candidates = document.querySelectorAll('[data-typing], main h1, main h2, main h3, main h4, main h5, main h6, main p, main li');
+  const typeTargets = Array.from(candidates).filter(el => !el.dataset.animated);
+  typeTargets.forEach(el => {
+    if (!el.dataset.typing) {
+      const text = el.textContent.trim();
+      if (text) {
+        el.dataset.typing = text;
+        el.textContent = '';
+      }
+    }
+  });
+  const toObserve = typeTargets.filter(el => el.dataset.typing);
+  if (toObserve.length) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting && !entry.target.dataset.animated) {
@@ -42,7 +53,7 @@ function initFMC() {
         }
       });
     }, { threshold: 0.5 });
-    typeTargets.forEach(el => observer.observe(el));
+    toObserve.forEach(el => observer.observe(el));
   }
 
   const PLACEHOLDER = 'https://unsplash.it/500/500';
