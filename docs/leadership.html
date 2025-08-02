@@ -11,7 +11,7 @@
 <body class="flex flex-col min-h-screen">
   <nav class="bg-white shadow">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="flex justify-between items-center py-4">
+      <div class="flex items-center py-4">
         <a href="index.html" class="flex items-center">
           <img src="static/assets/images/logo.png" alt="FMC Logo" class="h-24">
           <div class="ml-2">
@@ -19,19 +19,13 @@
             <span class="block text-sm">Financial Modeling Club at William & Mary</span>
           </div>
         </a>
-        <ul class="flex space-x-4">
+        <ul class="flex-grow flex justify-center space-x-4">
           <li><a href="index.html" class="text-gray-700 hover:text-green-700">Home</a></li>
-          <li class="relative group">
-            <a href="howwework.html" class="text-gray-700 hover:text-green-700">About Us</a>
-            <ul class="absolute left-0 mt-2 hidden group-hover:block bg-white border rounded shadow">
-              <li><a href="about.html" class="block px-4 py-2 hover:bg-gray-100">Background</a></li>
-              <li><a href="speaker.html" class="block px-4 py-2 hover:bg-gray-100">Speaker of the Week</a></li>
-            </ul>
-          </li>
-          <li><a href="leadership.html" class="text-gray-700 hover:text-green-700">Leadership</a></li>
+          <li><a href="howwework.html" class="text-gray-700 hover:text-green-700">Meetings</a></li>
+          <li><a href="leadership.html" class="text-gray-700 hover:text-green-700">Our Team</a></li>
           <li><a href="schedule.html" class="text-gray-700 hover:text-green-700">Schedule</a></li>
-          <li><a href="join.html" class="ml-2 px-4 py-2 bg-green-700 text-white rounded hover:bg-green-800">Join Now</a></li>
         </ul>
+        <a href="join.html" class="ml-4 px-4 py-2 bg-green-700 text-white rounded hover:bg-green-800">Sign Up</a>
       </div>
     </div>
   </nav>
@@ -120,30 +114,6 @@
     </section>
   </main>
 
-  <footer class="bg-gray-100 py-8 mt-auto">
-    <div class="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-center gap-4">
-      <img src="static/assets/images/logo.png" alt="FMC Logo" class="h-16">
-      <div class="text-center">
-        <div>Financial Modeling Club</div>
-        <div class="font-serif">at William &amp; Mary</div>
-      </div>
-      <ul class="flex flex-col md:flex-row md:space-x-4">
-        <li><a class="text-gray-700 hover:text-green-700" href="index.html">Home</a></li>
-        <li class="relative group">
-          <a class="text-gray-700 hover:text-green-700" href="howwework.html">About Us</a>
-          <ul class="absolute left-0 mt-2 hidden group-hover:block bg-white border rounded shadow">
-            <li><a href="about.html" class="block px-4 py-2 hover:bg-gray-100">Background</a></li>
-            <li><a href="speaker.html" class="block px-4 py-2 hover:bg-gray-100">Speaker of the Week</a></li>
-          </ul>
-        </li>
-        <li><a class="text-gray-700 hover:text-green-700" href="leadership.html">Leadership</a></li>
-        <li><a class="text-gray-700 hover:text-green-700" href="schedule.html">Schedule</a></li>
-        <li><a class="text-gray-700 hover:text-green-700" href="join.html">Join Now</a></li>
-      </ul>
-      <a href="https://www.instagram.com/financialmodelingclubwm" target="_blank" class="text-4xl text-pink-600 hover:text-pink-700"><i class="fab fa-instagram"></i></a>
-      <a href="mailto:financialmodel@wm.edu" class="text-gray-700 hover:text-green-700">financialmodel@wm.edu</a>
-    </div>
-  </footer>
 
   <script src="static/js/scripts.js"></script>
 </body>
