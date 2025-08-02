@@ -7,10 +7,7 @@
 }
 body {
   font-family: "Inter", sans-serif;
-  background-image: url("../assets/images/grey-black-white-glowing-abstract-gradient-shape-black-grainy-background-minimal-header-cover-poster-design-copy-space_284753-2725.jpg") !important;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: var(--openai-white);
 }
 
 /* Transparent glassmorphic utility */
