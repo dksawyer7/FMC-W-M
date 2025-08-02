@@ -96,15 +96,14 @@
   justify-content: center;
   border-radius: 0.5rem;
   text-align: center;
-}
-
-.card-front {
-  background: white;
-  border: 1px solid #e5e7eb;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .card-back {
-  background: #8b5cf6;
   color: white;
   transform: rotateY(180deg);
 }
