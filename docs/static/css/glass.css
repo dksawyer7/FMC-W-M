@@ -1,7 +1,13 @@
+
 :root {
   --openai-black: #000000;
   --openai-white: #FFFFFF;
   --chatgpt-green: #00A67E;
+
+}
+body {
+  font-family: "Inter", sans-serif;
+
 }
 
 .glass {
