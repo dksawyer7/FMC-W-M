@@ -26,9 +26,9 @@ nav, nav * {
   font-size: 1.40625rem;
 }
 
-/* Bubble border style for nav tabs */
-.nav-tab {
-  display: inline-block;
+/* Bubble border style for grouped nav tabs */
+.nav-tabs {
+  display: inline-flex;
   border: 1px solid rgba(128, 0, 128, 0.7);
   border-radius: 9999px;
   padding: 0.25rem 0.75rem;
