@@ -95,7 +95,7 @@ function initFMC() {
           e.preventDefault();
           const start = window.scrollY;
           const end = target.getBoundingClientRect().top + start;
-          const duration = 600;
+          const duration = 900;
           const startTime = performance.now();
 
           function easeInOutQuad(t) {
