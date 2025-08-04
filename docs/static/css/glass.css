@@ -138,38 +138,17 @@ main h6 {
 }
 
 .insta-item {
-  flex: 0 0 8.3333%;
+  flex: 0 0 25%;
 }
 
 .insta-row-fast {
-  animation: insta-scroll 40s linear infinite;
+  animation: insta-scroll 50s linear infinite;
 }
 
 .insta-row-slow {
-  animation: insta-scroll 60s linear infinite;
-  animation-delay: -30s;
+  animation: insta-scroll 75s linear infinite;
+  animation-delay: -37.5s;
   margin-top: 1rem;
-}
-
-.insta-marquee::before,
-.insta-marquee::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 4rem;
-  height: 100%;
-  pointer-events: none;
-  z-index: 10;
-}
-
-.insta-marquee::before {
-  left: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-}
-
-.insta-marquee::after {
-  right: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }
 
   @keyframes insta-scroll {
