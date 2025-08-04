@@ -126,6 +126,19 @@ main h6 {
   padding: 1rem;
 }
 
+/* Speaker of the Week card */
+.speaker-card {
+  display: inline-block;
+  width: auto;
+  padding: 0;
+}
+
+.speaker-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* Instagram marquee */
 .insta-marquee {
   overflow: hidden;
