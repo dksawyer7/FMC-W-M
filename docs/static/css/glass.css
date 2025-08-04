@@ -196,6 +196,7 @@ nav {
   position: relative;
   display: inline-block;
   overflow: hidden;
+  border-radius: 50%;
 }
 
 .logo-shimmer::after {
@@ -214,6 +215,7 @@ nav {
   transform: skewX(-25deg);
   animation: logo-shimmer 2s infinite;
   pointer-events: none;
+  border-radius: 50%;
 }
 
 @keyframes logo-shimmer {
