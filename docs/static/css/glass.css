@@ -5,6 +5,9 @@
   --accent-gray: #808080;
 
 }
+html {
+  font-size: 125%;
+}
 body {
   font-family: "Inter", sans-serif;
   background-color: var(--openai-black) !important;
