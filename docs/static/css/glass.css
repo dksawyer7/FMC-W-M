@@ -48,9 +48,9 @@ main h6 {
   z-index: 50;
 }
 
-/* Increase nav opacity but keep background blending */
+/* Opaque navigation bar matching background */
 .sticky-nav.glass {
-  background-color: rgba(0, 0, 0, 0.5) !important;
+  background-color: var(--openai-black) !important;
 }
 
 /* Transparent glassmorphic utility */
