@@ -15,8 +15,24 @@ body {
   color: var(--openai-white) !important;
 }
 
+/* Navigation uses default system fonts to keep non-nav text in Inter */
+nav, nav * {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
 body * {
   color: var(--openai-white) !important;
+}
+
+/* Uniform section header sizing to match "Who We Are" */
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  font-size: 1.875rem !important; /* Tailwind's text-3xl */
+  line-height: 2.25rem !important;
 }
 
 /* Sticky navigation bar */
@@ -174,12 +190,12 @@ nav {
 .fade-char {
   opacity: 0;
   display: inline-block;
-  transition: opacity 0.3s ease-in;
+  transition: opacity 0.9s ease-in;
 }
 
 .fade-in-block {
   opacity: 0;
-  transition: opacity 0.9s ease-in-out;
+  transition: opacity 2.7s ease-in-out;
 }
 
 .fade-in-block.visible {
