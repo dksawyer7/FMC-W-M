@@ -41,7 +41,7 @@ function initFMC() {
         if (entry.isIntersecting && !entry.target.dataset.animated) {
           const el = entry.target;
           const text = el.dataset.typing;
-          fadeType(el, text, 45);
+          typeText(el, text, 45);
           el.dataset.animated = 'true';
           observer.unobserve(el);
         }
@@ -122,46 +122,24 @@ function initFMC() {
   }
 }
 
-function fadeType(el, text, speed) {
+function typeText(el, text, speed) {
   el.textContent = '';
   const isHeading = /^H[1-6]$/.test(el.tagName);
-  const chars = Array.from(text);
-  if (isHeading) {
-    chars.push('_');
+  let idx = 0;
+
+  function typeNext() {
+    if (idx < text.length) {
+      el.textContent += text[idx++];
+      setTimeout(typeNext, speed);
+    } else if (isHeading) {
+      const cursor = document.createElement('span');
+      cursor.className = 'cursor';
+      cursor.textContent = '_';
+      el.appendChild(cursor);
+    }
   }
 
-  const spans = chars.map((char, idx) => {
-    const span = document.createElement('span');
-    span.className = 'fade-char';
-    if (isHeading && idx === chars.length - 1) {
-      span.classList.add('cursor');
-    }
-    span.textContent = char;
-    span.style.whiteSpace = 'pre';
-    el.appendChild(span);
-    return span;
-  });
-
-  const lines = new Map();
-  spans.forEach(span => {
-    const top = span.offsetTop;
-    if (!lines.has(top)) {
-      lines.set(top, []);
-    }
-    lines.get(top).push(span);
-  });
-
-  lines.forEach(lineSpans => {
-    lineSpans.forEach((span, idx) => {
-      span.style.transitionDelay = `${idx * speed}ms`;
-    });
-  });
-
-  requestAnimationFrame(() => {
-    spans.forEach(span => {
-      span.style.opacity = '1';
-    });
-  });
+  typeNext();
 }
 
 document.addEventListener('DOMContentLoaded', initFMC);
