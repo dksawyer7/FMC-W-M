@@ -7,7 +7,8 @@
 }
 body {
   font-family: "Inter", sans-serif;
-  background-color: var(--openai-white);
+  background-color: var(--openai-white) !important;
+  background-image: none !important;
 }
 
 /* Sticky navigation bar */
@@ -19,12 +20,12 @@ nav {
 
 /* Transparent glassmorphic utility */
 .glass {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: var(--openai-white);
+  border-radius: 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: none;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: none !important;
 }
 
 /* Liquid morph navigation styles */
@@ -112,13 +113,13 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 0.5rem;
+  border-radius: 0;
   text-align: center;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  background: var(--openai-white);
+  border: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
 }
 
 .card-back {
