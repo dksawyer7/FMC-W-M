@@ -39,7 +39,7 @@ function initFMC() {
         if (entry.isIntersecting && !entry.target.dataset.animated) {
           const el = entry.target;
           const text = el.dataset.typing;
-          fadeType(el, text, 15);
+          fadeType(el, text, 5);
           el.dataset.animated = 'true';
           observer.unobserve(el);
         }
