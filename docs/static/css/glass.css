@@ -40,6 +40,7 @@ main h6 {
 
 /* Sticky navigation bar */
 nav {
+  position: -webkit-sticky; /* Safari compatibility */
   position: sticky;
   top: 0;
   z-index: 50;
