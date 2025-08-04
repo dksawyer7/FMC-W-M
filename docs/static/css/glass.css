@@ -143,6 +143,10 @@ nav {
   width: max-content;
 }
 
+.insta-item {
+  flex: 0 0 25%;
+}
+
 .insta-row-fast {
   animation: insta-scroll 20s linear infinite;
 }
