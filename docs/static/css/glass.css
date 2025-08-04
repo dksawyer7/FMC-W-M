@@ -257,6 +257,8 @@ main h6 {
   padding: 0.5rem;
   display: inline-block;
   background-color: #E1306C;
+  position: relative;
+  overflow: hidden;
 }
 
 .insta-color {
@@ -268,8 +270,60 @@ main h6 {
   padding: 0.5rem;
   display: inline-block;
   background-color: #0A66C2;
+  position: relative;
+  overflow: hidden;
 }
 
 .linkedin-color {
   color: #FFFFFF;
+}
+
+/* Jiggle and shine animations for social icons */
+.insta-icon:hover,
+.linkedin-icon:hover {
+  animation: icon-jiggle 0.6s infinite;
+}
+
+.insta-icon::after,
+.linkedin-icon::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  pointer-events: none;
+}
+
+.insta-icon:hover::after,
+.linkedin-icon:hover::after {
+  animation: icon-shine 0.75s forwards;
+}
+
+@keyframes icon-jiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes icon-shine {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 200%;
+  }
 }
