@@ -41,7 +41,7 @@ function initFMC() {
         if (entry.isIntersecting && !entry.target.dataset.animated) {
           const el = entry.target;
           const text = el.dataset.typing;
-          typeText(el, text, 45);
+          typeText(el, text, 68); // slowed typing by 50%
           el.dataset.animated = 'true';
           observer.unobserve(el);
         }
