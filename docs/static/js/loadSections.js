@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'leadership.html',
     'schedule.html',
     'join.html',
-    'speaker.html',
-    'sitemap.html'
+    'speaker.html'
   ];
   const container = document.getElementById('content');
   Promise.all(
