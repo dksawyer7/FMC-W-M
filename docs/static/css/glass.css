@@ -224,3 +224,29 @@ nav {
     left: 100%;
   }
 }
+
+/* 3D hover floating jiggle */
+.hover-jiggle {
+  display: inline-block;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.hover-jiggle:hover {
+  animation: jiggle-3d 1.5s ease-in-out infinite;
+}
+
+@keyframes jiggle-3d {
+  0%, 100% {
+    transform: translateY(0) rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: translateY(-4px) rotateX(6deg) rotateY(-6deg);
+  }
+  50% {
+    transform: translateY(0) rotateX(0deg) rotateY(0deg);
+  }
+  75% {
+    transform: translateY(-4px) rotateX(-6deg) rotateY(6deg);
+  }
+}
