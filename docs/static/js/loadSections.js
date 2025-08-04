@@ -25,10 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const doc = parser.parseFromString(html, 'text/html');
       const main = doc.querySelector('main');
       if (main) {
-        const section = document.createElement('section');
-        section.id = page.replace('.html', '');
-        section.innerHTML = main.innerHTML;
-        container.appendChild(section);
+        const fragment = document.createRange().createContextualFragment(
+          main.innerHTML.trim()
+        );
+        const firstElement = fragment.firstElementChild;
+        if (firstElement) {
+          firstElement.id = page.replace('.html', '');
+        }
+        container.appendChild(fragment);
       }
     });
     if (window.initFMC) {
