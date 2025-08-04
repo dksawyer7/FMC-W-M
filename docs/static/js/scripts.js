@@ -95,7 +95,9 @@ function initFMC() {
         if (target) {
           e.preventDefault();
           const start = window.scrollY;
-          const end = target.getBoundingClientRect().top + start;
+          const nav = document.querySelector('.sticky-nav');
+          const navHeight = nav ? nav.offsetHeight : 0;
+          const end = target.getBoundingClientRect().top + start - navHeight;
           const duration = 1800; // slowed scroll by 50%
           const startTime = performance.now();
 
