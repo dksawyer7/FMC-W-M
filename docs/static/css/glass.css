@@ -7,8 +7,13 @@
 }
 body {
   font-family: "Inter", sans-serif;
-  background-color: var(--openai-white) !important;
+  background-color: var(--openai-black) !important;
   background-image: none !important;
+  color: var(--openai-white) !important;
+}
+
+body * {
+  color: var(--openai-white) !important;
 }
 
 /* Sticky navigation bar */
@@ -20,7 +25,7 @@ nav {
 
 /* Transparent glassmorphic utility */
 .glass {
-  background: var(--openai-white);
+  background: var(--openai-black);
   border-radius: 0;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
@@ -115,7 +120,7 @@ nav {
   justify-content: center;
   border-radius: 0;
   text-align: center;
-  background: var(--openai-white);
+  background: var(--openai-black);
   border: none;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
@@ -123,9 +128,7 @@ nav {
 }
 
 .card-back {
-
-  color: black;
-
+  color: var(--openai-white);
   transform: rotateY(180deg);
 }
 
