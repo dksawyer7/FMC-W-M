@@ -105,9 +105,18 @@ function initFMC() {
 
 function fadeType(el, text, speed) {
   el.textContent = '';
-  const spans = Array.from(text).map(char => {
+  const isHeading = /^H[1-6]$/.test(el.tagName);
+  const chars = Array.from(text);
+  if (isHeading) {
+    chars.push('_');
+  }
+
+  const spans = chars.map((char, idx) => {
     const span = document.createElement('span');
     span.className = 'fade-char';
+    if (isHeading && idx === chars.length - 1) {
+      span.classList.add('cursor');
+    }
     span.textContent = char;
     span.style.whiteSpace = 'pre';
     el.appendChild(span);
@@ -134,16 +143,6 @@ function fadeType(el, text, speed) {
       span.style.opacity = '1';
     });
   });
-
-  if (/^H[1-6]$/.test(el.tagName)) {
-    const cursor = document.createElement('span');
-    cursor.className = 'cursor';
-    cursor.textContent = '_';
-    const totalDuration = spans.length * speed + 200;
-    setTimeout(() => {
-      el.appendChild(cursor);
-    }, totalDuration);
-  }
 }
 
 document.addEventListener('DOMContentLoaded', initFMC);
