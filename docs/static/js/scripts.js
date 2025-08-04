@@ -39,15 +39,7 @@ function initFMC() {
         if (entry.isIntersecting && !entry.target.dataset.animated) {
           const el = entry.target;
           const text = el.dataset.typing;
-          el.textContent = '';
-          let i = 0;
-          const interval = setInterval(() => {
-            el.textContent = text.slice(0, i + 1);
-            i++;
-            if (i === text.length) {
-              clearInterval(interval);
-            }
-          }, 50);
+          fadeType(el, text, 15);
           el.dataset.animated = 'true';
           observer.unobserve(el);
         }
@@ -109,34 +101,23 @@ function initFMC() {
     });
     document.body.dataset.scrollBound = 'true';
   }
-  initScrollTyping();
 }
 
-function initScrollTyping() {
-  const targets = document.querySelectorAll('h1, h2, h3');
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        if (el.dataset.typingAnimated) return;
-        obs.unobserve(el);
-        const text = el.textContent.trim();
-        el.textContent = '';
-        el.classList.add('typing');
-        let i = 0;
-        const interval = setInterval(() => {
-          el.textContent += text[i];
-          i++;
-          if (i >= text.length) {
-            clearInterval(interval);
-            el.classList.remove('typing');
-            el.dataset.typingAnimated = 'true';
-          }
-        }, 50);
-      }
+function fadeType(el, text, speed) {
+  el.textContent = '';
+  text.split('').forEach((char, idx) => {
+    const span = document.createElement('span');
+    span.className = 'fade-char';
+    span.textContent = char;
+    span.style.transitionDelay = `${idx * speed}ms`;
+    span.style.whiteSpace = 'pre';
+    el.appendChild(span);
+  });
+  requestAnimationFrame(() => {
+    el.querySelectorAll('.fade-char').forEach(span => {
+      span.style.opacity = '1';
     });
-  }, { threshold: 0.6 });
-  targets.forEach(el => observer.observe(el));
+  });
 }
 
 document.addEventListener('DOMContentLoaded', initFMC);
