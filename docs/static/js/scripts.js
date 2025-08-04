@@ -105,16 +105,32 @@ function initFMC() {
 
 function fadeType(el, text, speed) {
   el.textContent = '';
-  text.split('').forEach((char, idx) => {
+  const spans = Array.from(text).map(char => {
     const span = document.createElement('span');
     span.className = 'fade-char';
     span.textContent = char;
-    span.style.transitionDelay = `${idx * speed}ms`;
     span.style.whiteSpace = 'pre';
     el.appendChild(span);
+    return span;
   });
+
+  const lines = new Map();
+  spans.forEach(span => {
+    const top = span.offsetTop;
+    if (!lines.has(top)) {
+      lines.set(top, []);
+    }
+    lines.get(top).push(span);
+  });
+
+  lines.forEach(lineSpans => {
+    lineSpans.forEach((span, idx) => {
+      span.style.transitionDelay = `${idx * speed}ms`;
+    });
+  });
+
   requestAnimationFrame(() => {
-    el.querySelectorAll('.fade-char').forEach(span => {
+    spans.forEach(span => {
       span.style.opacity = '1';
     });
   });
