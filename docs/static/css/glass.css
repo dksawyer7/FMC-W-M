@@ -269,8 +269,8 @@ main h6 {
 
 /* Instagram follow icon styles */
 .insta-icon {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.225);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 50%;
   padding: 0.5rem;
   backdrop-filter: blur(4px);
@@ -290,8 +290,8 @@ main h6 {
 }
 
 .linkedin-icon {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.225);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 50%;
   padding: 0.5rem;
   backdrop-filter: blur(4px);
