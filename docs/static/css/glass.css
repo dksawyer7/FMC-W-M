@@ -10,6 +10,13 @@ body {
   background-color: var(--openai-white);
 }
 
+/* Sticky navigation bar */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
 /* Transparent glassmorphic utility */
 .glass {
   background: rgba(255, 255, 255, 0.1);
