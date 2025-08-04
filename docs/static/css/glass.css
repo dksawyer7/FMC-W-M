@@ -264,25 +264,20 @@ main h6 {
   border-radius: 50%;
   padding: 0.5rem;
   display: inline-block;
+  background-color: #E1306C;
 }
 
 .insta-color {
-  background: linear-gradient(45deg,
-      #F09433 0%,
-      #E6683C 25%,
-      #DC2743 50%,
-      #CC2366 75%,
-      #BC1888 100%);
-  -webkit-background-clip: text;
-  color: transparent;
+  color: #FFFFFF;
 }
 
 .linkedin-icon {
   border-radius: 50%;
   padding: 0.5rem;
   display: inline-block;
+  background-color: #0A66C2;
 }
 
 .linkedin-color {
-  color: #0A66C2;
+  color: #FFFFFF;
 }
