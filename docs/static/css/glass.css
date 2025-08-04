@@ -15,6 +15,7 @@ body {
   background-image: none !important;
   color: var(--openai-white) !important;
   overflow-x: hidden;
+  padding-top: 8rem; /* Space for fixed nav */
 }
 
 /* Navigation uses default system fonts to keep non-nav text in Inter */
@@ -40,9 +41,9 @@ main h6 {
 
 /* Sticky navigation bar */
 nav {
-  position: -webkit-sticky; /* Safari compatibility */
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 50;
 }
