@@ -174,7 +174,16 @@ nav {
 .fade-char {
   opacity: 0;
   display: inline-block;
-  transition: opacity 0.1s ease-in;
+  transition: opacity 0.3s ease-in;
+}
+
+.fade-in-block {
+  opacity: 0;
+  transition: opacity 0.9s ease-in-out;
+}
+
+.fade-in-block.visible {
+  opacity: 1;
 }
 
 /* Blinking cursor for typed headings */
