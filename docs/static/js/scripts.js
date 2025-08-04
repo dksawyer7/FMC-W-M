@@ -81,7 +81,8 @@ function initFMC() {
   const instaRows = document.querySelectorAll('.insta-row');
   instaRows.forEach(row => {
     if (!row.dataset.duplicated) {
-      row.innerHTML += row.innerHTML;
+      const content = row.innerHTML;
+      row.innerHTML = content + content + content + content;
       row.dataset.duplicated = 'true';
     }
   });
