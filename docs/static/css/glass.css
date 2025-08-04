@@ -21,13 +21,6 @@ nav, nav * {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* Bubble borders for navigation tabs */
-nav ul li a {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 9999px;
-  padding: 0.25rem 0.75rem;
-}
-
 body * {
   color: var(--openai-white) !important;
 }
