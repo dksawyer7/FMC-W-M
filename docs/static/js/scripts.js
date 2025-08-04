@@ -134,6 +134,16 @@ function fadeType(el, text, speed) {
       span.style.opacity = '1';
     });
   });
+
+  if (/^H[1-6]$/.test(el.tagName)) {
+    const cursor = document.createElement('span');
+    cursor.className = 'cursor';
+    cursor.textContent = '_';
+    const totalDuration = spans.length * speed + 200;
+    setTimeout(() => {
+      el.appendChild(cursor);
+    }, totalDuration);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', initFMC);
