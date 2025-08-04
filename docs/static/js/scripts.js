@@ -113,7 +113,8 @@ function initFMC() {
             if (time < 1) {
               requestAnimationFrame(step);
             } else {
-              window.location.hash = targetId;
+              window.scrollTo(0, end);
+              history.replaceState(null, '', '#' + targetId);
             }
           }
 
