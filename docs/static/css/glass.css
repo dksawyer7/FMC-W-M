@@ -159,16 +159,11 @@ nav {
     }
   }
 
-/* Typing animation for headings */
-.typing::after {
-  content: '|';
-  animation: blink 0.7s steps(1) infinite;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
+/* Fade typing characters */
+.fade-char {
+  opacity: 0;
+  display: inline-block;
+  transition: opacity 0.2s ease-in;
 }
 
 /* Shimmer effect for logo */
