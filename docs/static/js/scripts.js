@@ -21,9 +21,11 @@ function initFMC() {
       });
   }
 
-  const candidates = document.querySelectorAll('[data-typing], main h1, main h2, main h3, main h4, main h5, main h6, main p, main li');
-  const typeTargets = Array.from(candidates).filter(el => !el.dataset.animated);
-  typeTargets.forEach(el => {
+  const headingCandidates = document.querySelectorAll('[data-typing], main h1, main h2, main h3, main h4, main h5, main h6');
+  const textCandidates = document.querySelectorAll('main p, main li');
+
+  const headingTargets = Array.from(headingCandidates).filter(el => !el.dataset.animated);
+  headingTargets.forEach(el => {
     if (!el.dataset.typing) {
       const text = el.textContent.trim();
       if (text) {
@@ -32,20 +34,37 @@ function initFMC() {
       }
     }
   });
-  const toObserve = typeTargets.filter(el => el.dataset.typing);
+  const toObserve = headingTargets.filter(el => el.dataset.typing);
   if (toObserve.length) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting && !entry.target.dataset.animated) {
           const el = entry.target;
           const text = el.dataset.typing;
-          fadeType(el, text, 5);
+          fadeType(el, text, 15);
           el.dataset.animated = 'true';
           observer.unobserve(el);
         }
       });
     }, { threshold: 0.5 });
     toObserve.forEach(el => observer.observe(el));
+  }
+
+  const fadeTargets = Array.from(textCandidates).filter(el => !el.dataset.animated);
+  if (fadeTargets.length) {
+    const fadeObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.dataset.animated) {
+          entry.target.classList.add('visible');
+          entry.target.dataset.animated = 'true';
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    fadeTargets.forEach(el => {
+      el.classList.add('fade-in-block');
+      fadeObserver.observe(el);
+    });
   }
 
   const PLACEHOLDER = 'https://unsplash.it/500/500';
