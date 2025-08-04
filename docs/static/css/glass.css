@@ -2,8 +2,6 @@
 :root {
   --openai-black: #000000;
   --openai-white: #FFFFFF;
-  --accent-gray: #808080;
-
 }
 html {
   font-size: 125%;
@@ -61,61 +59,6 @@ main h6 {
   -webkit-backdrop-filter: none;
   border: none;
   box-shadow: none !important;
-}
-
-/* Liquid morph navigation styles */
-.liquid-morph-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.liquid-morph-element {
-  background: var(--accent-gray);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.25rem 0.5rem;
-  position: relative;
-  border-radius: 50px;
-  overflow: hidden;
-  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.liquid-morph-element span {
-  color: var(--openai-white);
-  font-size: 0.875rem;
-  position: relative;
-  z-index: 2;
-  text-align: center;
-}
-
-.liquid-morph-element::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: conic-gradient(
-    var(--accent-gray) 0deg,
-    var(--openai-black) 120deg,
-    var(--accent-gray) 240deg
-  );
-  transition: all 0.6s ease;
-  opacity: 0;
-  transform: scale(0);
-}
-
-.liquid-morph-element:hover {
-  border-radius: 10px;
-  transform: rotate(15deg);
-}
-
-.liquid-morph-element:hover::before {
-  opacity: 0.5;
-  transform: scale(2);
 }
 
 /* Team card layout */
