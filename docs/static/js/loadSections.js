@@ -35,8 +35,5 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.initFMC) {
       window.initFMC();
     }
-    if (window.showSection) {
-      window.showSection('home');
-    }
   });
 });
