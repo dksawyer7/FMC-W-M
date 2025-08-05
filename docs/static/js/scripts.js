@@ -128,18 +128,12 @@ function initFMC() {
 
 function typeText(el, text, speed) {
   el.textContent = '';
-  const isHeading = /^H[1-6]$/.test(el.tagName);
   let idx = 0;
 
   function typeNext() {
     if (idx < text.length) {
       el.textContent += text[idx++];
       setTimeout(typeNext, speed);
-    } else if (isHeading) {
-      const cursor = document.createElement('span');
-      cursor.className = 'cursor';
-      cursor.textContent = '_';
-      el.appendChild(cursor);
     }
   }
 
