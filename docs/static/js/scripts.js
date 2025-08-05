@@ -1,3 +1,22 @@
+function showSection(targetId) {
+  const sections = document.querySelectorAll('#content > section');
+  sections.forEach(sec => {
+    if (targetId === 'home') {
+      if (sec.id === 'home' || sec.id === 'about') {
+        sec.classList.remove('hidden');
+      } else {
+        sec.classList.add('hidden');
+      }
+    } else {
+      if (sec.id === targetId) {
+        sec.classList.remove('hidden');
+      } else {
+        sec.classList.add('hidden');
+      }
+    }
+  });
+}
+
 function initFMC() {
   const list = document.getElementById('events-list');
   if (list && !list.dataset.loaded) {
@@ -94,6 +113,7 @@ function initFMC() {
         const target = document.getElementById(targetId);
         if (target) {
           e.preventDefault();
+          showSection(targetId);
           const start = window.scrollY;
           const nav = document.querySelector('.sticky-nav');
           const navHeight = nav ? nav.offsetHeight : 0;
@@ -142,3 +162,4 @@ function typeText(el, text, speed) {
 
 document.addEventListener('DOMContentLoaded', initFMC);
 window.initFMC = initFMC;
+window.showSection = showSection;
