@@ -1,12 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   const pages = [
     'about.html',
-    'howwework.html',
     'leadership.html',
-    'schedule.html',
-    'join.html',
-    'speaker.html',
-    'instagram.html'
+    'howwework.html',
+    'speaker.html'
   ];
   const container = document.getElementById('content');
   Promise.all(
