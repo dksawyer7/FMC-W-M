@@ -44,6 +44,10 @@ body * {
   color: var(--openai-white) !important;
 }
 
+#intro-message {
+  white-space: nowrap;
+}
+
 /* Uniform section header sizing to match "Who We Are" */
 main h1,
 main h2,
