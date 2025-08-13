@@ -71,8 +71,8 @@ main h6 {
 }
 
 #intro-message {
-  white-space: nowrap;
-  max-width: none;
+  white-space: normal;
+  max-width: 100%;
 }
 
 /* Uniform section header sizing to match "Who We Are" */
