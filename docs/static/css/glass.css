@@ -84,11 +84,10 @@ main h6 {
   left: 0;
   width: 100%;
   z-index: 50;
-}
-
-/* Opaque navigation bar matching background */
-.sticky-nav.glass {
-  background-color: var(--openai-black) !important;
+  background: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 /* Transparent glassmorphic utility */
