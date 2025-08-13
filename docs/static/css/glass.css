@@ -57,6 +57,7 @@ p {
   max-width: 65ch;
   margin-left: auto;
   margin-right: auto;
+  text-align: left;
 }
 
 #intro-message {
@@ -84,15 +85,13 @@ main h6 {
   width: 100%;
   z-index: 50;
 }
-
-/* Glassmorphic navigation bar */
 .sticky-nav.glass {
   background: rgba(255, 255, 255, 0.1) !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
-}
+  }
 
 /* Transparent glassmorphic utility */
 .glass {
