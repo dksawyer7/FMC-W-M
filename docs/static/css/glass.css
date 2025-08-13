@@ -86,7 +86,7 @@ main h6 {
 
 /* Team card layout */
 .card {
-  width: 300px;
+  width: 256px;
   margin: 1rem auto;
   display: flex;
   flex-direction: column;
