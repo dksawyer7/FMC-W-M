@@ -21,9 +21,10 @@ nav, nav * {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* Nav title with reduced size */
+/* Nav title with larger, bold text */
 .nav-title {
-  font-size: 0.84375rem;
+  font-size: 1.125rem;
+  font-weight: 700;
 }
 
 /* Logo with reduced height */
