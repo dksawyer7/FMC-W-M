@@ -104,6 +104,12 @@ main h6 {
   overflow-wrap: anywhere;
 }
 
+.card img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
 /* Instagram marquee */
 .insta-marquee {
   overflow: hidden;
