@@ -200,29 +200,29 @@ main h6 {
 .insta-icon {
   width: 3rem;
   height: 3rem;
-  border-radius: 50%;
-  padding: 0.5rem;
+  padding: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #E1306C;
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
+  border-radius: 0;
+  background: none;
 }
 
 .linkedin-icon {
   width: 3rem;
   height: 3rem;
-  border-radius: 50%;
-  padding: 0.5rem;
+  padding: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #0A66C2;
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
+  border-radius: 0;
+  background: none;
 }
 
 .insta-icon img,
