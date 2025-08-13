@@ -23,7 +23,7 @@ nav, nav * {
 
 /* Nav title with larger, bold text */
 .nav-title {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
