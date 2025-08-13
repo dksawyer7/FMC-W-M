@@ -14,6 +14,7 @@ body {
   color: var(--openai-white) !important;
   overflow-x: hidden;
   padding-top: 8rem;
+  text-align: center;
 }
 
 /* Navigation uses default system fonts to keep non-nav text in Inter */
@@ -57,7 +58,7 @@ p {
   max-width: 65ch;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  text-align: left;
 }
 
 /* Center text for headings */
