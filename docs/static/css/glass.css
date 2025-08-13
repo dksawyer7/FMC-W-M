@@ -57,10 +57,10 @@ p {
   max-width: 65ch;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
-/* Center text for paragraphs and headings */
-main p,
+/* Center text for headings */
 main h1,
 main h2,
 main h3,
