@@ -196,10 +196,6 @@ main h6 {
   box-sizing: border-box;
 }
 
-.insta-color {
-  color: #FFFFFF;
-}
-
 .linkedin-icon {
   width: 3rem;
   height: 3rem;
@@ -214,8 +210,11 @@ main h6 {
   box-sizing: border-box;
 }
 
-.linkedin-color {
-  color: #FFFFFF;
+.insta-icon img,
+.linkedin-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* Jiggle animation for social icons */
