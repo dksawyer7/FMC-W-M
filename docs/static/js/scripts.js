@@ -1,4 +1,7 @@
 function initFMC() {
+  document.querySelectorAll('.copyright-year').forEach(span => {
+    span.textContent = new Date().getFullYear();
+  });
   const list = document.getElementById('events-list');
   if (list && !list.dataset.loaded) {
     fetch('data/events.json')
