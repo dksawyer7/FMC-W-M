@@ -18,6 +18,12 @@ body {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  body {
+    padding-top: 12rem;
+  }
+}
+
 /* Navigation uses default system fonts to keep non-nav text in Inter */
 nav, nav * {
   font-family: Helvetica, Arial, sans-serif;
