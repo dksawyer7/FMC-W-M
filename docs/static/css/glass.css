@@ -85,6 +85,7 @@ main h6 {
   font-size: 1.875rem !important; /* Tailwind's text-3xl */
   line-height: 2.25rem !important;
   font-family: "Courier New", monospace;
+  text-align: center;
 }
 
 /* Sticky navigation bar */
