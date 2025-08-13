@@ -9,33 +9,39 @@
   <link href="static/css/glass.css" rel="stylesheet">
   <link rel="icon" href="static/assets/images/download%20%281%29BC.ico" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  </style>
 </head>
 <body class="flex flex-col min-h-screen bg-gradient-to-br from-gray-200 to-gray-50">
   <nav class="shadow rounded-none sticky-nav">
     <div class="max-w-7xl mx-auto px-4">
       <div class="relative flex items-center justify-center py-4 h-24">
         <a href="index.html" class="absolute left-4 top-1/2 -translate-y-1/2 flex items-center">
-          <div class="logo-shimmer hover-jiggle">
+          <div>
             <img src="static/assets/images/logo.png" alt="FMC Logo" class="h-24">
           </div>
-          <div class="ml-2 hover-jiggle">
+          <div class="ml-2">
             <span class="block nav-title">Financial Modeling Club</span>
             <span class="block nav-title">@ William & Mary</span>
           </div>
         </a>
         <ul class="nav-tabs space-x-4">
-          <li><a href="index.html" class="hover-jiggle no-underline"><span>Home</span></a></li>
-          <li><a href="leadership.html" class="hover-jiggle no-underline"><span>Our Team</span></a></li>
-          <li><a href="howwework.html" class="hover-jiggle no-underline"><span>Meetings</span></a></li>
-          <li><a href="https://calendar.google.com/calendar/embed?src=aa3e8ef9cbda489545ecfcc3ae5daee0e2b0aaf5cfbd6211699381c04be035c8%40group.calendar.google.com&amp;ctz=America%2FNew_York" class="hover-jiggle no-underline"><span>Schedule</span></a></li>
+          <li><a href="index.html" class="no-underline"><span>Home</span></a></li>
+          <li><a href="leadership.html" class="no-underline"><span>Our Team</span></a></li>
+          <li><a href="howwework.html" class="no-underline"><span>Meetings</span></a></li>
+          <li><a href="https://calendar.google.com/calendar/embed?src=aa3e8ef9cbda489545ecfcc3ae5daee0e2b0aaf5cfbd6211699381c04be035c8%40group.calendar.google.com&amp;ctz=America%2FNew_York" class="no-underline"><span>Schedule</span></a></li>
         </ul>
         <div class="absolute right-4 top-1/2 -translate-y-1/2 flex items-center space-x-4">
           <a href="https://www.instagram.com/financialmodelingclubwm" target="_blank" aria-label="Follow us on Instagram">
-            <span class="insta-icon logo-shimmer hover-jiggle">
+            <span class="insta-icon">
               <img src="static/assets/images/Instagram_logo_2022.svg.webp" alt="Instagram logo" />
             </span>
           </a>
-          <a href="https://forms.gle/g9i47Hh5tsbSpKV19" class="hover-jiggle no-underline glass-button"><span>Sign Up</span></a>
+          <a href="https://forms.gle/g9i47Hh5tsbSpKV19" class="no-underline glass-button"><span>Sign Up</span></a>
         </div>
       </div>
     </div>
@@ -128,7 +134,5 @@
     </div>
     <div class="text-gray-600 text-sm mt-2">&copy; The Boehly Center for Excellence in Finance</div>
   </footer>
-
-  <script src="static/js/scripts.js"></script>
 </body>
 </html>
