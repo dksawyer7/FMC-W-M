@@ -52,8 +52,16 @@ body * {
   color: var(--openai-white) !important;
 }
 
+/* Ensure consistent paragraph width across the site */
+p {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #intro-message {
   white-space: nowrap;
+  max-width: none;
 }
 
 /* Uniform section header sizing to match "Who We Are" */
