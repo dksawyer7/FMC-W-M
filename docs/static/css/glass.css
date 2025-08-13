@@ -4,7 +4,8 @@
   --openai-white: #FFFFFF;
 }
 html {
-  font-size: 125%;
+  /* Set base font size so that 100% browser zoom matches the old 90% */
+  font-size: 112.5%;
   overflow-x: hidden;
 }
 body {
